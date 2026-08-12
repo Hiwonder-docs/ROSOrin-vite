@@ -381,7 +381,7 @@ When the joint rotates, the parent link serves as the pivot, and the child link 
 
 <img class="common_img" src="../_static/media/chapter_21/section_3/media/image21.png" />
 
-③ **\<origin>** describes the position of the joint, with indentation used to specify the detailed coordinates of the joint. The code below describes the position of the joint: **\<origin xyz=“0 0 0.1” />**. Here, xyz specifies the coordinates of the joint, placing it at x=0, y=0, z=0.1 in the coordinate system.
+③ **\<origin>** describes the position of the joint, with indentation used to specify the detailed coordinates of the joint. The code below describes the position of the joint: **\<origin 0 />**. Here, xyz specifies the coordinates of the joint, placing it at x=0, y=0, z=0.1 in the coordinate system.
 
 <img class="common_img" src="../_static/media/chapter_21/section_3/media/image22.png" />
 
