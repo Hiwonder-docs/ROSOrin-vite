@@ -133,6 +133,45 @@ function trimWhitespaceInsideStrong(code: string) {
     .join('\n')
 }
 
+function normalizeImagePathSlashes() {
+  const mdImagePattern = /!\[([^\]]*)\]\(([^)]+)\)/g
+  const htmlImagePattern = /(<img\b[^>]*\bsrc=")([^"]+)("[^>]*\/?>)/gi
+  const htmlLinkPattern = /(<a\b[^>]*\bhref=")([^"]+)("[^>]*>)/gi
+
+  function normalizePath(p: string): string {
+    if (p.startsWith('http://') || p.startsWith('https://') || p.startsWith('data:') || p.startsWith('#')) return p
+    return p.replace(/\\/g, '/')
+  }
+
+  return {
+    name: 'normalize-image-path-slashes',
+    enforce: 'pre' as const,
+    transform(code: string, id: string) {
+      if (!id.endsWith('.md')) return null
+      let changed = false
+
+      const mdReplaced = code.replace(mdImagePattern, (match, alt, src: string) => {
+        const norm = normalizePath(src)
+        if (norm !== src) { changed = true; return `![${alt}](${norm})` }
+        return match
+      })
+
+      const htmlImgReplaced = mdReplaced.replace(htmlImagePattern, (match, pre, src: string, post) => {
+        const norm = normalizePath(src)
+        if (norm !== src) { changed = true; return `${pre}${norm}${post}` }
+        return match
+      })
+
+      const htmlLinkReplaced = htmlImgReplaced.replace(htmlLinkPattern, (match, pre, href: string, post) => {
+        const norm = normalizePath(href)
+        if (norm !== href) { changed = true; return `${pre}${norm}${post}` }
+        return match
+      })
+
+      return changed ? htmlLinkReplaced : null
+    }
+  }
+}
 
 function preserveBrokenAbsoluteImages() {
   const imageTagPattern = /<img\b[^>]*\bsrc="([A-Za-z]:\\[^"]+)"[^>]*\/?>/g
@@ -148,38 +187,6 @@ function preserveBrokenAbsoluteImages() {
       imageTagPattern.lastIndex = 0
       const transformed = code.replace(imageTagPattern, (tag) => `{${tag.slice(1, -1)}}`)
       return transformed === code ? null : transformed
-    }
-  }
-}
-
-function normalizeImagePathSlashes() {
-  const imgSrcPattern = /(<img\b[^>]*\bsrc=")([^"]+)("[^>]*>)/gi
-  const mdImgPattern = /(!\[[^\]]*\]\()([^)]+)(\))/g
-
-  return {
-    name: 'normalize-image-path-slashes',
-    enforce: 'pre' as const,
-    transform(code: string, id: string) {
-      if (!id.endsWith('.md') || (!code.includes('<img') && !code.includes('!['))) {
-        return null
-      }
-
-      let changed = false
-
-      const fixSlashes = (path: string) => {
-        if (!path || path.startsWith('http://') || path.startsWith('https://') || path.startsWith('data:')) {
-          return path
-        }
-        const fixed = path.replace(/\\/g, '/')
-        if (fixed !== path) changed = true
-        return fixed
-      }
-
-      const transformed = code
-        .replace(imgSrcPattern, (match, prefix, src, suffix) => `${prefix}${fixSlashes(src)}${suffix}`)
-        .replace(mdImgPattern, (match, prefix, src, suffix) => `${prefix}${fixSlashes(src)}${suffix}`)
-
-      return changed ? transformed : null
     }
   }
 }
@@ -767,15 +774,15 @@ export default defineConfig({
       }
     },
     nav: [
+      { text: 'Home', link: 'https://www.hiwonder.net/', target: '_self' },
       {
         text: 'Version',
         items: [
-          { text: 'Jetson Orin Nano Version', link: '/projects/ROSOrin/en/jetson-orin-nano-version/' },
-          { text: 'Jetson Nano Version', link: '/projects/ROSOrin/en/jetson-nano-version/' },
-          { text: 'Raspberry Pi Version', link: '/projects/ROSOrin/en/raspberry-pi-version/' }
+          { text: 'Jetson Orin Nano', link: `https://wiki.hiwonder.com/projects/ROSOrin/en/jetson-orin-nano-version/` },
+          { text: 'Jetson Nano', link: `https://wiki.hiwonder.com/projects/ROSOrin/en/jetson-nano-version/` },
+          { text: 'Raspberry Pi', link: `https://wiki.hiwonder.com/projects/ROSOrin/en/raspberry-pi-version/` }
         ]
-      },
-      { text: 'Home', link: 'https://www.hiwonder.net/', target: '_self' }
+      }
     ],
     sidebar: getSidebar()
   }
