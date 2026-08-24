@@ -1,8 +1,8 @@
-# TurboPi Documentation
+﻿# ROSOrin Documentation
 
-This repository contains the TurboPi VitePress documentation site. The source
-files for each version are stored under `content/standard/docs/` and
-`content/advanced/docs/`.
+This repository contains the ROSOrin VitePress documentation site. The source
+files for each version are stored under `content/jetson-orin-nano-version/docs/`,
+`content/jetson-nano-version/docs/`, and `content/raspberry-pi-version/docs/`.
 
 ## Local development
 
@@ -22,8 +22,9 @@ npm run docs:stage-main
 
 The staged production files are generated in:
 
-- `projects/TurboPi/en/standard/`
-- `projects/TurboPi/en/advanced/`
+- `projects/ROSOrin/en/jetson-orin-nano-version/`
+- `projects/ROSOrin/en/jetson-nano-version/`
+- `projects/ROSOrin/en/raspberry-pi-version/`
 
 ## GitHub Pages deployment
 
@@ -34,11 +35,11 @@ The build artifacts under `projects/` are committed to the repository. Open
 The GitHub Pages direct URL is:
 
 ```text
-https://GITHUB-USERNAME.github.io/TurboPi-vite/projects/TurboPi/en/standard/
+https://GITHUB-USERNAME.github.io/ROSOrin-vite/projects/ROSOrin/en/jetson-orin-nano-version/
 ```
 
 The public-facing URL (via the baota Nginx reverse proxy) is:
 
 ```text
-https://wiki.hiwonder.com/projects/TurboPi/en/standard/
+https://wiki.hiwonder.com/projects/ROSOrin/en/jetson-orin-nano-version/
 ```

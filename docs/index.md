@@ -1,6 +1,6 @@
----
+﻿---
 layout: page-redirect
-redirectTo: /docs/1.getting_ready.html
+redirectTo: /docs/1_ROSOrin_Pro_User_Manual.html
 ---
 
-正在跳转到内容页面...
+Redirecting to the ROSOrin manual.

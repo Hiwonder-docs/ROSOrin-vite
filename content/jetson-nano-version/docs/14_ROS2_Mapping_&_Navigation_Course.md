@@ -169,7 +169,7 @@ To start writing the URDF model, we need to set the name of the robot following 
 
 <img src="../_static/media/chapter_13/section_1/media/image17.png"  class="common_img" />
 
-(3) **\<origin>** describes the position of the joint, with indentation used to specify the detailed coordinates of the joint. The image below describes the position of the joint: **\<origin 0 />**. xyz is the coordinate of the joint, indicating that the joint is located at x=0, y=0, z=0.1 in the coordinate system.
+(3) **\<origin>** describes the position of the joint, with indentation used to specify the detailed coordinates of the joint. The image below describes the position of the joint: **\<origin xyz=“0 0 0.1” />**. xyz is the coordinate of the joint, indicating that the joint is located at x=0, y=0, z=0.1 in the coordinate system.
 
 <img src="../_static/media/chapter_13/section_1/media/image18.png"  class="common_img" />
 

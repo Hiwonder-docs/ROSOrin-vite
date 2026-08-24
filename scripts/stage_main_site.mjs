@@ -1,11 +1,11 @@
-import { mkdir, rm, cp } from 'fs/promises'
+﻿import { mkdir, rm, cp } from 'fs/promises'
 import { fileURLToPath } from 'url'
 import { dirname, join } from 'path'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const repositoryRoot = join(__dirname, '..')
 
-const projectName = 'TurboPi'
+const projectName = 'ROSOrin'
 const version = process.env.DOCS_VERSION || 'latest'
 const targetDir = join(repositoryRoot, `projects/${projectName}/en/${version}`)
 

@@ -1,4 +1,4 @@
-import { rm, cp, readFile, writeFile, mkdtemp } from 'fs/promises'
+﻿import { rm, cp, readFile, writeFile, mkdtemp } from 'fs/promises'
 import fs from 'node:fs'
 import { fileURLToPath } from 'url'
 import { dirname, join } from 'path'
@@ -11,40 +11,33 @@ const repositoryRoot = join(__dirname, '..')
 const version = process.argv[2]
 if (!version) {
   console.error('Usage: node scripts/build_version.mjs <version>')
-  console.error('Example: node scripts/build_version.mjs standard')
+  console.error('Example: node scripts/build_version.mjs jetson-orin-nano-version')
   process.exit(1)
 }
 
-const versionAliasMap = {
-  'v1.1': 'standard',
-  'v1.2': 'advanced'
-}
-const normalizedVersion = versionAliasMap[version] || version
-const validVersions = ['standard', 'advanced']
-if (!validVersions.includes(normalizedVersion)) {
+const validVersions = ['jetson-orin-nano-version', 'jetson-nano-version', 'raspberry-pi-version']
+if (!validVersions.includes(version)) {
   console.error(`Invalid version: ${version}`)
   console.error(`Valid versions: ${validVersions.join(', ')}`)
   process.exit(1)
 }
 
-const contentDirName = normalizedVersion
-const projectName = 'TurboPi'
-const docsBase = `/projects/${projectName}/en/${normalizedVersion}/`
+const projectName = 'ROSOrin'
+const docsBase = `/projects/${projectName}/en/${version}/`
 const rootIndexPath = join(repositoryRoot, 'docs', 'index.md')
-const versionIndexPath = join(repositoryRoot, 'content', contentDirName, 'docs', 'index.md')
+const versionIndexPath = join(repositoryRoot, 'content', version, 'docs', 'index.md')
 const docsDocsDir = join(repositoryRoot, 'docs', 'docs')
 const docsStaticDir = join(repositoryRoot, 'docs', '_static')
-const backupRoot = await mkdtemp(join(tmpdir(), 'turbopi-docs-'))
+const backupRoot = await mkdtemp(join(tmpdir(), 'rosorin-docs-'))
 const backupDocsDir = join(backupRoot, 'docs')
 const backupStaticDir = join(backupRoot, 'static')
 const hasOriginalDocsDir = fs.existsSync(docsDocsDir)
 const hasOriginalStaticDir = fs.existsSync(docsStaticDir)
 
-console.log(`\n========== Building ${normalizedVersion} ==========`)
+console.log(`\n========== Building ${version} ==========`)
 console.log(`DOCS_BASE: ${docsBase}`)
 
-// 1. Copy content to docs working directory
-const contentDir = join(repositoryRoot, 'content', contentDirName)
+const contentDir = join(repositoryRoot, 'content', version)
 const originalRootIndex = await readFile(rootIndexPath, 'utf8')
 const versionRootIndex = await readFile(versionIndexPath, 'utf8')
 
@@ -65,24 +58,22 @@ try {
   await cp(join(contentDir, '_static'), docsStaticDir, { recursive: true })
   console.log('  Done.')
 
-  // 2. Build with VitePress
   console.log('\n[2/3] Building with VitePress...')
   execSync('npx vitepress build docs', {
     stdio: 'inherit',
     cwd: repositoryRoot,
-    env: { ...process.env, DOCS_BASE: docsBase, DOCS_VERSION: normalizedVersion }
+    env: { ...process.env, DOCS_BASE: docsBase, DOCS_VERSION: version }
   })
   console.log('  Done.')
 
-  // 3. Stage to projects directory
   console.log('\n[3/3] Staging to projects directory...')
   execSync('node scripts/stage_main_site.mjs', {
     stdio: 'inherit',
     cwd: repositoryRoot,
-    env: { ...process.env, DOCS_VERSION: normalizedVersion }
+    env: { ...process.env, DOCS_VERSION: version }
   })
 
-  console.log(`\n========== ${normalizedVersion} build complete ==========\n`)
+  console.log(`\n========== ${version} build complete ==========\n`)
 } finally {
   await writeFile(rootIndexPath, originalRootIndex)
   await rm(docsDocsDir, { recursive: true, force: true })

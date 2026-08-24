@@ -1,15 +1,14 @@
-{
+﻿{
   "scripts": {
     "build": "npm run build:all",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs",
     "docs:stage-main": "node scripts/stage_main_site.mjs",
-    "build:standard": "node scripts/build_version.mjs standard",
-    "build:advanced": "node scripts/build_version.mjs advanced",
-    "build:v1.1": "node scripts/build_version.mjs standard",
-    "build:v1.2": "node scripts/build_version.mjs advanced",
-    "build:all": "npm run build:standard && npm run build:advanced"
+    "build:jetson-orin-nano": "node scripts/build_version.mjs jetson-orin-nano-version",
+    "build:jetson-nano": "node scripts/build_version.mjs jetson-nano-version",
+    "build:raspberry-pi": "node scripts/build_version.mjs raspberry-pi-version",
+    "build:all": "npm run build:jetson-orin-nano && npm run build:jetson-nano && npm run build:raspberry-pi"
   },
   "dependencies": {
     "vitepress": "^1.6.4"
