@@ -1,8 +1,7 @@
-﻿# ROSOrin Documentation
+# 6-Channel-Servo-Tester Documentation
 
-This repository contains the ROSOrin VitePress documentation site. The source
-files for each version are stored under `content/jetson-orin-nano-version/docs/`,
-`content/jetson-nano-version/docs/`, and `content/raspberry-pi-version/docs/`.
+This repository contains the 6-Channel-Servo-Tester VitePress documentation site. The
+documentation source files are Markdown files under `docs/docs/`.
 
 ## Local development
 
@@ -20,11 +19,7 @@ npm run docs:build
 npm run docs:stage-main
 ```
 
-The staged production files are generated in:
-
-- `projects/ROSOrin/en/jetson-orin-nano-version/`
-- `projects/ROSOrin/en/jetson-nano-version/`
-- `projects/ROSOrin/en/raspberry-pi-version/`
+The staged production files are generated in `projects/6-Channel-Servo-Tester/en/latest/`.
 
 ## GitHub Pages deployment
 
@@ -35,11 +30,11 @@ The build artifacts under `projects/` are committed to the repository. Open
 The GitHub Pages direct URL is:
 
 ```text
-https://GITHUB-USERNAME.github.io/ROSOrin-vite/projects/ROSOrin/en/jetson-orin-nano-version/
+https://GITHUB-USERNAME.github.io/6-Channel-Servo-Tester-vite/projects/6-Channel-Servo-Tester/en/latest/
 ```
 
 The public-facing URL (via the baota Nginx reverse proxy) is:
 
 ```text
-https://wiki.hiwonder.com/projects/ROSOrin/en/jetson-orin-nano-version/
+https://wiki-test.hiwonder.com/projects/6-Channel-Servo-Tester/en/latest/
 ```

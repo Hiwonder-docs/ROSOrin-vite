@@ -1,4 +1,4 @@
-﻿import { mkdir, rm, cp } from 'fs/promises'
+import { mkdir, rm, cp } from 'fs/promises'
 import { fileURLToPath } from 'url'
 import { dirname, join } from 'path'
 

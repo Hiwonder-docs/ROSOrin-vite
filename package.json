@@ -1,6 +1,7 @@
-﻿{
+{
   "scripts": {
-    "build": "npm run build:all",
+    "build": "npm run build:jetson-orin-nano",
+    "dev": "vitepress dev docs",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs",

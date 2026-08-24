@@ -8,28 +8,42 @@ import ImageViewer from './ImageViewer.vue'
 const { frontmatter } = useData()
 const route = useRoute()
 
+const ALL_VERSIONS = ['jetson-orin-nano-version', 'jetson-nano-version', 'raspberry-pi-version']
+const VERSION_LABELS: Record<string, string> = {
+  'jetson-orin-nano-version': 'Jetson Orin Nano',
+  'jetson-nano-version': 'Jetson Nano',
+  'raspberry-pi-version': 'Raspberry Pi'
+}
+
+function detectCurrentVersion(): string {
+  if (!inBrowser) return ALL_VERSIONS[0]
+  for (const v of ALL_VERSIONS) {
+    if (location.pathname.includes(`/en/${v}/`)) return v
+  }
+  return ALL_VERSIONS[0]
+}
+
 function injectVersionSwitcher() {
   if (!inBrowser) return
   const navList = document.querySelector('.VPNavBarMenu')
   if (!navList) return
   if (navList.querySelector('.version-switcher')) return
 
-  const current = location.pathname.includes('/en/advanced/') ? 'advanced' : 'standard'
-  const labels: Record<string, string> = {
-    standard: 'Standard',
-    advanced: 'Advanced'
-  }
+  const current = detectCurrentVersion()
 
   const li = document.createElement('li')
   li.className = 'version-switcher'
+  const itemsHtml = ALL_VERSIONS
+    .map(v => `<li class="version-switcher__item ${current === v ? 'is-selected' : ''}" data-version="${v}">${VERSION_LABELS[v]}</li>`)
+    .join('')
+
   li.innerHTML = `
     <span class="version-switcher__label">Version</span>
     <button type="button" class="version-switcher__trigger">
-      <span class="version-switcher__name">${labels[current]}</span>
+      <span class="version-switcher__name">${VERSION_LABELS[current]}</span>
     </button>
     <ul class="version-switcher__menu" style="display:none">
-      <li class="version-switcher__item ${current === 'standard' ? 'is-selected' : ''}" data-version="standard">Standard</li>
-      <li class="version-switcher__item ${current === 'advanced' ? 'is-selected' : ''}" data-version="advanced">Advanced</li>
+      ${itemsHtml}
     </ul>
   `
 
@@ -71,17 +85,20 @@ function interceptCrossVersionLinks() {
     const href = link.getAttribute('href') || ''
     if (!href || href.startsWith('http://') || href.startsWith('https://')) return
 
-    const currentVersion = location.pathname.includes('/en/advanced/') ? 'advanced' : 'standard'
-    const otherVersion = currentVersion === 'standard' ? 'advanced' : 'standard'
+    const currentVersion = detectCurrentVersion()
+    const otherVersions = ALL_VERSIONS.filter(v => v !== currentVersion)
 
-    if (href.includes(`/en/${otherVersion}/`)) {
-      e.preventDefault()
-      e.stopPropagation()
-      const origin = window.location.origin
-      const targetPath = href.startsWith('/')
-        ? href
-        : new URL(href, window.location.href).pathname
-      window.location.replace(origin + targetPath)
+    for (const otherVersion of otherVersions) {
+      if (href.includes(`/en/${otherVersion}/`)) {
+        e.preventDefault()
+        e.stopPropagation()
+        const origin = window.location.origin
+        const targetPath = href.startsWith('/')
+          ? href
+          : new URL(href, window.location.href).pathname
+        window.location.replace(origin + targetPath)
+        break
+      }
     }
   }, true)
 }

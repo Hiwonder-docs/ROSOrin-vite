@@ -1,4 +1,4 @@
-﻿# 7. ROS+Machine Learning Course
+# 7. ROS+Machine Learning Course
 
 ## 7.1 MediaPipe Human-Robot Interaction
 
@@ -3234,7 +3234,7 @@ Move the mouse to the desired location and hold the left mouse button to draw a 
 
 2. Enter the following command to open the file for editing:
 
-```bad
+```bash
 vim ~/my_data/classes.names
 ```
 
@@ -3322,7 +3322,7 @@ vim ~/ros2_ws/src/yolov8_detect/yolov8_detect/yolov8_detect_demo.py
 
 6. After that, enter the command to run the model-calling program. A depth camera needs to be connected.
 
-```bash]
+```bash
 ros2 launch yolov8_detect yolov8_detect_demo.launch.py
 ```
 

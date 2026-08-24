@@ -1,6 +1,6 @@
-﻿---
+---
 layout: page-redirect
-redirectTo: /docs/1_ROSOrin_Pro_User_Manual.html
+redirectTo: /docs/1.Read_First_Course.html
 ---
 
-Redirecting to the ROSOrin manual.
+正在跳转到内容页面...
