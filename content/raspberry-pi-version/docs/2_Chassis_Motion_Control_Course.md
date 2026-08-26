@@ -1,4 +1,4 @@
-# 2\. Chassis Motion Control Course
+# 2. Chassis Motion Control Course
 
 ## 2.1 Motion Control
 

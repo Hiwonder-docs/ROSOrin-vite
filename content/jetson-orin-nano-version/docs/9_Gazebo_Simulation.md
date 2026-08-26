@@ -1,4 +1,4 @@
-# 9\. Gazebo Simulation
+# 9. Gazebo Simulation
 
 <p id ="anther9.1"></p>
 

@@ -1,4 +1,4 @@
-# 1\. ROSOrin User Manual
+# 1. ROSOrin User Manual
 
 ## 1.1 Introduction
 

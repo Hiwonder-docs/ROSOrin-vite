@@ -1,4 +1,4 @@
-# 8\. ROS1-Gazebo Simulation
+# 8. ROS1-Gazebo Simulation
 
 ## 8.1 Getting Started with URDF Model
 

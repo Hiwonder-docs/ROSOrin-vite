@@ -1,4 +1,4 @@
-# 7\. ROS1-ROS+Machine Learning Course
+# 7. ROS1-ROS+Machine Learning Course
 
 ## 7.1 Machine Learning Basics
 

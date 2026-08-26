@@ -1,4 +1,4 @@
-# 16\. ROS2-ROS+Machine Learning Course
+# 16. ROS2-ROS+Machine Learning Course
 
 ## 16.1 MediaPipe Human-Robot Interaction
 

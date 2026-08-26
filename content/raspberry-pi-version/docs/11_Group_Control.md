@@ -1,4 +1,4 @@
-# 11\. Group Control
+# 11. Group Control
 
 ## 11.1 Leader-Follower Configuration
 

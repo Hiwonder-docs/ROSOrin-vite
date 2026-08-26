@@ -1,4 +1,4 @@
-# 11\. ROS2-Chassis Motion Control Course
+# 11. ROS2-Chassis Motion Control Course
 
 ## 11.1 Motion Control
 

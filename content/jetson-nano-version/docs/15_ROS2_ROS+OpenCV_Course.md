@@ -1,4 +1,4 @@
-# 15\. ROS2-ROS+OpenCV Course
+# 15. ROS2-ROS+OpenCV Course
 
 15.1 Color Threshold Adjustment
 ---

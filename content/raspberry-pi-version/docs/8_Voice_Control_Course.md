@@ -1,4 +1,4 @@
-# 8\. Voice Interaction Applications
+# 8. Voice Interaction Applications
 
 ## 8.1 Voice Module Installation
 

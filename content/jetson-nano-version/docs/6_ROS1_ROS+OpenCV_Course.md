@@ -1,4 +1,4 @@
-# 6\. ROS1- ROS+OpenCV Course
+# 6. ROS1- ROS+OpenCV Course
 
 ## 6.1 Color Threshold Adjustment
 

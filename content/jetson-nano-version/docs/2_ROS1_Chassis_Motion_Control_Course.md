@@ -1,4 +1,4 @@
-# 2\. ROS1- Chassis Motion Control Course
+# 2. ROS1- Chassis Motion Control Course
 
 ## 2.1 Kinematics Analysis
 <p id ="anther2.1"></p>

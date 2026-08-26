@@ -1,4 +1,4 @@
-# 12\. ROS2-LiDAR Course
+# 12. ROS2-LiDAR Course
 
 ## 12.1 Introduction to LiDAR
 

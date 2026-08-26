@@ -1,4 +1,4 @@
-# 10\. ROS1-Group Control
+# 10. ROS1-Group Control
 
 ## 10.1 Multi-Robot Communication Setup
 <p id ="anther10.1"></p>

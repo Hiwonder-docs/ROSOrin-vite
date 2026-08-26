@@ -1,4 +1,4 @@
-# 3\. LiDAR Course
+# 3. LiDAR Course
 
 ## 3.1 Introduction
 

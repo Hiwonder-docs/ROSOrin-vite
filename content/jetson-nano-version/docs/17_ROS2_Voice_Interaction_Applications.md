@@ -1,4 +1,4 @@
-# 17\. ROS2-Voice Interaction Applications
+# 17. ROS2-Voice Interaction Applications
 
 ## 17.1 Voice Module Installation
 

@@ -1,4 +1,4 @@
-# 18\. ROS2-Gazebo Simulation
+# 18. ROS2-Gazebo Simulation
 
 ## 18.1 Virtual Machine Installation and Import
 <p id ="anther18.1"></p>

@@ -1,4 +1,4 @@
-# 9\. ROS1- Voice Interaction Applications
+# 9. ROS1- Voice Interaction Applications
 
 ## 9.1 Voice Module Installation
 

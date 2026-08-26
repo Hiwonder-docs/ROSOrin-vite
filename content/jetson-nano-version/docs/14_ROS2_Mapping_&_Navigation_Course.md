@@ -1,4 +1,4 @@
-# 14\. ROS2-Mapping \& Navigation Course
+# 14. ROS2-Mapping \& Navigation Course
 
 ## 14.1 Mapping Tutorial
 

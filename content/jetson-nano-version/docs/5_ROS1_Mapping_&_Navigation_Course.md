@@ -1,4 +1,4 @@
-# 5\. ROS1-Mapping \& Navigation Course
+# 5. ROS1-Mapping \& Navigation Course
 
 ## 5.1 Mapping Tutorial
 <p id ="anther5.1"></p>

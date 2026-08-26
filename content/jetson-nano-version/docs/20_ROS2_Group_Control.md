@@ -1,4 +1,4 @@
-# 20\. ROS2-Group Control
+# 20. ROS2-Group Control
 
 ## 20.1 Leader-Follower Configuration
 
