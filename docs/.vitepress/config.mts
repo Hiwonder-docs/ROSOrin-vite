@@ -774,15 +774,7 @@ export default defineConfig({
       }
     },
     nav: [
-      { text: 'Home', link: 'https://www.hiwonder.net/', target: '_self' },
-      {
-        text: 'Version',
-        items: [
-          { text: 'Jetson Orin Nano', link: `https://wiki.hiwonder.com/projects/ROSOrin/en/jetson-orin-nano-version/` },
-          { text: 'Jetson Nano', link: `https://wiki.hiwonder.com/projects/ROSOrin/en/jetson-nano-version/` },
-          { text: 'Raspberry Pi', link: `https://wiki.hiwonder.com/projects/ROSOrin/en/raspberry-pi-version/` }
-        ]
-      }
+      { text: 'Home', link: 'https://www.hiwonder.net/', target: '_self' }
     ],
     sidebar: getSidebar()
   }
