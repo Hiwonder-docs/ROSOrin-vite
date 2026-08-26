@@ -42,45 +42,7 @@ The included components of the ROSOrin robot are listed in the table below.
 
 <img src="../_static/media/chapter_1\section_1/media/image225.png" style="width:600px"  class="common_img" />
 
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Access Module List</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f5f5f5;
-        }
-        .table-container {
-            margin: 0 auto;
-            background-color: white;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        table {
-            width: 100%;
-            table-layout: fixed; /* Ensure equal column widths */
-            border-collapse: collapse;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 12px 15px;
-            text-align: center;  /* Center text in both th and td */
-            vertical-align: middle; /* Center vertically */
-        }
-        th {
-            background-color: #f2f2f2;
-            font-weight: bold;
-        }
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-    </style>
-</head>
-<body>
-    <div class="table-container">
+<div class="table-container">
         <table>
             <thead>
                 <tr>
@@ -115,9 +77,7 @@ The included components of the ROSOrin robot are listed in the table below.
                 </tr>
             </tbody>
         </table>
-    </div>
-</body>
-</html>
+</div>
 
 
 
@@ -125,44 +85,7 @@ The included components of the ROSOrin robot are listed in the table below.
 
 <img src="../_static/media/chapter_1\section_1/media/image223.png" style="width:600px"  class="common_img" />
 
-<!DOCTYPE html>
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Access Module List</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f5f5f5;
-        }
-        .table-container {
-            margin: 0 auto;
-            background-color: white;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 12px 15px;
-            text-align: left;
-        }
-        th {
-            background-color: #f2f2f2;
-            font-weight: bold;
-        }
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-    </style>
-</head>
-<body>
-    <div class="table-container">
+<div class="table-container">
         <table>
             <thead>
                 <tr>
@@ -197,9 +120,7 @@ The included components of the ROSOrin robot are listed in the table below.
                 </tr>
             </tbody>
         </table>
-    </div>
-</body>
-</html>
+</div>
 
 
 
@@ -209,43 +130,7 @@ The included components of the ROSOrin robot are listed in the table below.
 
 
 
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Module Integration List</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f5f5f5;
-        }
-        .table-container {
-            margin: 0 auto;
-            background-color: white;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 12px 15px;
-            text-align: left;
-        }
-        th {
-            background-color: #f2f2f2;
-            font-weight: bold;
-        }
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-    </style>
-</head>
-<body>
-    <div class="table-container">
+<div class="table-container">
         <table>
             <thead>
                 <tr>
@@ -276,9 +161,7 @@ The included components of the ROSOrin robot are listed in the table below.
                 </tr>
             </tbody>
         </table>
-    </div>
-</body>
-</html>
+</div>
 
 
 
@@ -809,33 +692,6 @@ This interface is divided into two sections:
 
 - #### Function
 
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <title>Icon Function Description</title>
-    <style>
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 50px 0;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 50px;
-            text-align: left;
-        }
-        th {
-            background-color: #f2f2f2;
-            font-weight: bold;
-        }
-        img {
-            display: block;
-            margin: 0 auto;
-        }
-    </style>
-</head>
-<body>
     <table>
         <thead>
             <tr>
@@ -870,8 +726,6 @@ This interface is divided into two sections:
             </tr>
         </tbody>
     </table>
-</body>
-</html>
 
 - #### Operating Steps and Effects
 
@@ -1823,33 +1677,6 @@ The Ackerman chassis of the ROSOrin robot uses a PWM servo to steer the two fron
 
 <img src="../_static/media/chapter_1\section_1/media/image27.png" class="common_img" />
 
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <title>Servo Specifications</title>
-    <style>
-        table {
-            border-collapse: collapse;
-            width: 100%;
-            margin: 20px auto;
-            font-family: "Microsoft Yahei", Arial, sans-serif;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: center;
-        }
-        thead tr {
-            background-color: #ffc107;
-            font-weight: bold;
-        }
-        tbody tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-    </style>
-</head>
-<body>
 <table>
     <tbody>
         <tr>
@@ -1914,8 +1741,6 @@ The Ackerman chassis of the ROSOrin robot uses a PWM servo to steer the two fron
         </tr>
     </tbody>
 </table>
-</body>
-</html>
 
 
 
@@ -1927,29 +1752,6 @@ The OLED display module features a 0.91-inch blue OLED display, offering a wide 
 
 Specifications:
 
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <title>OLED Display Specifications</title>
-    <style>
-        table {
-            border-collapse: collapse;
-            width: 100%;
-            margin: 20px auto;
-            font-family: Arial, sans-serif;
-        }
-        th, td {
-            border: 1px solid #ccc;
-            padding: 8px;
-            text-align: left;
-        }
-        th {
-            font-weight: bold;
-        }
-    </style>
-</head>
-<body>
 <table>
     <tbody>
         <tr>
@@ -1995,8 +1797,6 @@ Specifications:
         </tr>
     </tbody>
 </table>
-</body>
-</html>
 
 Port Description:
 
