@@ -1,8 +1,8 @@
-﻿# 1\. ROSOrin User Manual
+# 1\. ROSOrin User Manual
 
 ## 1.1 Introduction
 
-ROSOrin is a versatile ROS-based platform designed for teaching and research. Its patented all-in-one modular chassis makes it easy to switch between Mecanum, Ackermann, and differential drive setups, letting you adapt to different movement modes in seconds. The chassis features a swing arm suspension that keeps all four wheels evenly balanced. This ensures smooth operation on uneven surfaces, prevents wheel slip from affecting motor encoders, and keeps movement stable and efficient. Powered by high-performance hardware鈥攊ncluding NVIDIA Jetson, Raspberry Pi 5, LiDAR, 3D depth camera, a 6-microphone array, and an AI voice interaction module鈥擱OSOrin supports a wide range of applications: robot motion control, SLAM navigation, path planning, 3D object recognition, tracking and obstacle avoidance, multi-point navigation, gesture interaction, voice interaction, and sound source localization. With multimodal large AI models and the 6-microphone array, ROSOrin can understand its surroundings, plan actions, and carry out tasks intelligently, opening the door to advanced embodied AI applications.
+ROSOrin is a versatile ROS-based platform designed for teaching and research. Its patented all-in-one modular chassis makes it easy to switch between Mecanum, Ackermann, and differential drive setups, letting you adapt to different movement modes in seconds. The chassis features a swing arm suspension that keeps all four wheels evenly balanced. This ensures smooth operation on uneven surfaces, prevents wheel slip from affecting motor encoders, and keeps movement stable and efficient. Powered by high-performance hardware—including NVIDIA Jetson, Raspberry Pi 5, LiDAR, 3D depth camera, a 6-microphone array, and an AI voice interaction module—ROSOrin supports a wide range of applications: robot motion control, SLAM navigation, path planning, 3D object recognition, tracking and obstacle avoidance, multi-point navigation, gesture interaction, voice interaction, and sound source localization. With multimodal large AI models and the 6-microphone array, ROSOrin can understand its surroundings, plan actions, and carry out tasks intelligently, opening the door to advanced embodied AI applications.
 
 <img src="../_static/media/chapter_1\section_1/media/image218.png" style="width:600px"  class="common_img" />
 
@@ -292,11 +292,11 @@ The included components of the ROSOrin robot are listed in the table below.
 
 <img src="../_static/media/chapter_1\section_1/media/image164.png"  style="width:800px"  />
 
-3. Remove the M4脳10 screws inside the wheels, then take out the black M2.5脳6 screws from the couplers, and detach both Mecanum wheels.
+3. Remove the M4×10 screws inside the wheels, then take out the black M2.5×6 screws from the couplers, and detach both Mecanum wheels.
 
 <img src="../_static/media/chapter_1\section_1/media/image165.png"  style="width:800px"  />
 
-4. Mount the Ackermann wheels using the same black M2.5脳6 and M4脳10 screws. Once installed, the assembly is complete.
+4. Mount the Ackermann wheels using the same black M2.5×6 and M4×10 screws. Once installed, the assembly is complete.
 
 <img src="../_static/media/chapter_1\section_1/media/image166.png" style="width:800px"  />
 
@@ -312,13 +312,13 @@ The included components of the ROSOrin robot are listed in the table below.
 
 ### 1.2.5 Differential Drive Chassis Switch
 
-1. Remove the M4脳10 screws inside the wheels, then take out the black M2.5脳6 screws from the couplers, and detach all the Mecanum wheels.
+1. Remove the M4×10 screws inside the wheels, then take out the black M2.5×6 screws from the couplers, and detach all the Mecanum wheels.
 
 <img src="../_static/media/chapter_1\section_1/media/image306.png"  style="width:500px"  />
 
 <img src="../_static/media/chapter_1\section_1/media/image307.png"  style="width:500px"  />
 
-2. Mount the four differential wheels using the same black M2.5脳6 and M4脳10 screws. Once installed, the assembly is complete.
+2. Mount the four differential wheels using the same black M2.5×6 and M4×10 screws. Once installed, the assembly is complete.
    
    <img src="../_static/media/chapter_1\section_1/media/image308.png"  style="width:500px"  />
    
@@ -347,7 +347,7 @@ In this section, you will learn about the startup sequence of the robotic arm an
 
 ### 1.3.2 Power-On Status
 
-1. Ensure that the robot鈥檚 power switch is not turned on.
+1. Ensure that the robot’s power switch is not turned on.
    
    <img src="../_static/media/chapter_1\section_1/media/image43.png"  width="505" height="325" />
    
@@ -355,7 +355,7 @@ In this section, you will learn about the startup sequence of the robotic arm an
    
    <img src="../_static/media/chapter_1\section_1/media/image44.png" width="478" height="369" />
    
-3. Make sure to connect the red wire to the red terminal and the black wire to the black terminal as shown in the figure below. The connectors are designed with a reverse polarity prevention feature. Do not force them if they don鈥檛 match, you may rotate the connector and try again. Then, reassemble the metal cover.
+3. Make sure to connect the red wire to the red terminal and the black wire to the black terminal as shown in the figure below. The connectors are designed with a reverse polarity prevention feature. Do not force them if they don’t match, you may rotate the connector and try again. Then, reassemble the metal cover.
    
    <img src="../_static/media/chapter_1\section_1/media/image45.png"  width="491" height="354" />
    
@@ -367,7 +367,7 @@ In this section, you will learn about the startup sequence of the robotic arm an
 
 <img src="../_static/media/chapter_1\section_1/media/image43.png"  width="491" height="354" />
 
-5. The blue LED1 at the lower right of the expansion board will light up and start blinking. At this stage, only the network configuration service is running, the ROS system and other services have not yet fully started. Wait until the buzzer emits a short beep 鈥?this indicates the system has finished booting.
+5. The blue LED1 at the lower right of the expansion board will light up and start blinking. At this stage, only the network configuration service is running, the ROS system and other services have not yet fully started. Wait until the buzzer emits a short beep — this indicates the system has finished booting.
 
 (1) The LED locations on the Jetson controllers are shown in the diagram below.
 
@@ -377,7 +377,7 @@ In this section, you will learn about the startup sequence of the robotic arm an
 
 <img src="../_static/media/chapter_1\section_1/media/image226.png" class="common_img" />
 
-6. By default, the device is configured in AP direct-connect mode. After startup, a Wi-Fi hotspot beginning with 鈥淗W鈥?will appear. To connect via mobile app or remote desktop, enter the default password: hiwonder.
+6. By default, the device is configured in AP direct-connect mode. After startup, a Wi-Fi hotspot beginning with “HW” will appear. To connect via mobile app or remote desktop, enter the default password: hiwonder.
 
 <img src="../_static/media/chapter_1\section_1/media/image243.png" class="common_img" />
 
@@ -386,7 +386,7 @@ In this section, you will learn about the startup sequence of the robotic arm an
 > **If the hotspot does not appear after startup, troubleshoot as follows:**
 >
 > * **Verify that all steps in the Power-On Status section have been followed.**
-> * **If LED1 stays solid blue instead of blinking, the system may be in LAN mode. Long-press the KEY1 button on the expansion board for 5鈥?0 seconds. If LED1 starts blinking, the HW Wi-Fi hotspot has been re-enabled.**
+> * **If LED1 stays solid blue instead of blinking, the system may be in LAN mode. Long-press the KEY1 button on the expansion board for 5–10 seconds. If LED1 starts blinking, the HW Wi-Fi hotspot has been re-enabled.**
 > * **If LED1 does not blink after pressing KEY1, the system may not detect the SD card or SSD. Remove and reinsert the SD card.**
 > * **If the LED remains solid after reinserting, the SD card may be corrupted, or the system image has not been flashed for kits without a controller. You may replace or reflash the image to the SD card.**
 > * **If the issue persists, the Raspberry Pi 5 controller or Jetson controller may be faulty. Please contact customer support for assistance.**
@@ -503,7 +503,7 @@ Important Notice: Hiwonder is not responsible for any damage, economic loss, or 
 > 
 > * **Please grant all permissions requested during installation to ensure the app functions properly.**
 > 
-> * **Turn on your phone鈥檚 GPS and Wi-Fi before opening the app.**
+> * **Turn on your phone’s GPS and Wi-Fi before opening the app.**
 
 This section explains how to install the **WonderAI** app to control the robot.
 
@@ -526,9 +526,9 @@ After installing the app, you can proceed to connect the robot. The robot suppor
 
 2. STA Mode (LAN Connection): The controller connects to a specified Wi-Fi network, and Internet access is available in this mode.
 
-By default, the robot starts in AP direct connection mode. Regardless of whether the user chooses AP direct connection or STA LAN mode, the robot鈥檚 features remain the same.
+By default, the robot starts in AP direct connection mode. Regardless of whether the user chooses AP direct connection or STA LAN mode, the robot’s features remain the same.
 
-Tip: We recommend starting with the AP direct connection mode to quickly explore and experience the robot鈥檚 functions. You can switch to LAN mode later based on your specific needs.
+Tip: We recommend starting with the AP direct connection mode to quickly explore and experience the robot’s functions. You can switch to LAN mode later based on your specific needs.
 
 #### 1.5.2.1 AP Mode Connection (Must Read)
 
@@ -554,9 +554,9 @@ Tip: We recommend starting with the AP direct connection mode to quickly explore
 
 > [!NOTE]
 >
-> **If a message pops up saying 鈥淣etwork is unavailable, continue?鈥? tap 鈥淜eep Connection鈥?to proceed.**
+> **If a message pops up saying “Network is unavailable, continue?”, tap “Keep Connection” to proceed.**
 
-5. If a message appears saying **Whether to switch and enter the searched product interface?**, it means the wrong product was selected in Step 1. Tap **Confirm** to automatically switch to the correct version鈥檚 mode selection screen.
+5. If a message appears saying **Whether to switch and enter the searched product interface?**, it means the wrong product was selected in Step 1. Tap **Confirm** to automatically switch to the correct version’s mode selection screen.
 
 <img src="../_static/media/chapter_1\section_1/media/image56.png" style="width:500px" class="common_img" />
 
@@ -601,7 +601,7 @@ Tip: We recommend starting with the AP direct connection mode to quickly explore
 
 <img src="../_static/media/chapter_1\section_1/media/image64.png" style="width:400px" class="common_img" />
 
-9. Press and hold the robot鈥檚 icon to display its current IP address.
+9. Press and hold the robot’s icon to display its current IP address.
 
 <img src="../_static/media/chapter_1\section_1/media/image263.png" style="width:400px" class="common_img" />
 
@@ -721,7 +721,7 @@ For the Ackermann chassis, dragging the horizontal slider adjusts the rotation o
 > 
 > * **Before stating the feature, ensure that the robot is on a spacious surface with enough room to move freely.**
 > 
-> * **In LiDAR Obstacle Avoidance and LiDAR Following modes, the detection range is a 90掳 fan-shaped area in front of the robot.**
+> * **In LiDAR Obstacle Avoidance and LiDAR Following modes, the detection range is a 90° fan-shaped area in front of the robot.**
 > 
 > * **The LiDAR Guard mode is not supported when using the Ackerman chassis.**
 
@@ -791,7 +791,7 @@ The LiDAR mode includes three features: Avoid obstacle, Lidar following, and Lid
 > 
 > * **Place the target object on the same surface as the robot and move it in a horizontal direction, which ensures a smoother tracking experience.**
 > 
-> * **Choose an appropriate color range for target extraction. If the range is too wide, unwanted colors may be included. If the range is too narrow, the target may be lost. Also, avoid having objects with similar colors to the target in the camera鈥檚 view.**
+> * **Choose an appropriate color range for target extraction. If the range is too wide, unwanted colors may be included. If the range is too narrow, the target may be lost. Also, avoid having objects with similar colors to the target in the camera’s view.**
 
 - #### Interface Overview
 
@@ -889,7 +889,7 @@ This interface is divided into two sections:
 > 
 > * **Before starting this feature, lay out the tracking path with tape and place the robot on the track.**
 > 
-> * **Choose an appropriate color range for target extraction. If the range is too wide, unwanted colors may be included. If the range is too narrow, the target may be lost. Also, avoid having objects with similar colors to the target in the camera鈥檚 view.**
+> * **Choose an appropriate color range for target extraction. If the range is too wide, unwanted colors may be included. If the range is too narrow, the target may be lost. Also, avoid having objects with similar colors to the target in the camera’s view.**
 > 
 > * **After the feature starts, please ensure there is no other object containing the recognition color except the target object within the camera view. Otherwise, the recognition result will be affected.**
 
@@ -994,11 +994,11 @@ Click the **Start** button to begin the autonomous driving feature. The robot wi
 
 <img src="../_static/media/chapter_1\section_1/media/image110.png"  width="529" height="202" />
 
-(1) Each time the robot is powered on, the app auto-start service will launch, which includes the wireless controller control service. If this service has not been closed, no additional actions are needed鈥攕imply connect and control.
+(1) Each time the robot is powered on, the app auto-start service will launch, which includes the wireless controller control service. If this service has not been closed, no additional actions are needed—simply connect and control.
 
 (2) Since signals from wireless controllers can interfere with each other, it is recommended not to use this function when multiple robots are in the same area to avoid misconnection or unintended control.
 
-(3) After turning on the wireless controller, if it does not connect to the robot within 30 seconds or remains unused for 5 minutes after connection, it will enter sleep mode automatically. **To wake up the wireless controller and exit sleep mode, press the 鈥淪TART鈥?button.**
+(3) After turning on the wireless controller, if it does not connect to the robot within 30 seconds or remains unused for 5 minutes after connection, it will enter sleep mode automatically. **To wake up the wireless controller and exit sleep mode, press the “START” button.**
 
 (4) If the robot does not respond while using the controller, try starting the relevant services. For detailed steps, refer to the document 2. Motion Control Course.
 
@@ -1012,7 +1012,7 @@ Click the **Start** button to begin the autonomous driving feature. The robot wi
 
 ### 1.6.3 Button Functions
 
-The following table describes the functions of the controller buttons and joysticks from the robot鈥檚 first-person perspective:
+The following table describes the functions of the controller buttons and joysticks from the robot’s first-person perspective:
 
 > [!NOTE]
 >
@@ -1038,11 +1038,11 @@ The following table describes the functions of the controller buttons and joysti
 
 There are two ways to remotely control the robot: graphical control and command-line control.
 
-NoMachine and VNC are graphical remote-control softwares. After installation, you can connect to the robot鈥檚 hotspot and directly control the robot from your computer. The Jetson Nano, Jetson Orin Nano, and Jetson Orin NX controllers use NoMachine for connection, while the Raspberry Pi 5 controller uses VNC. When connected via the two softwares, you can clearly see the robot鈥檚 system desktop, making it convenient for intuitive operation.
+NoMachine and VNC are graphical remote-control softwares. After installation, you can connect to the robot’s hotspot and directly control the robot from your computer. The Jetson Nano, Jetson Orin Nano, and Jetson Orin NX controllers use NoMachine for connection, while the Raspberry Pi 5 controller uses VNC. When connected via the two softwares, you can clearly see the robot’s system desktop, making it convenient for intuitive operation.
 
-In contrast to NoMachine and VNC, MobaXterm connects via SSH and focuses on command-line control. It does not display the robot鈥檚 full system desktop鈥攐nly the command-line interface. For users who are familiar with terminal commands, this method allows faster robot control while reducing computational load and memory usage.
+In contrast to NoMachine and VNC, MobaXterm connects via SSH and focuses on command-line control. It does not display the robot’s full system desktop—only the command-line interface. For users who are familiar with terminal commands, this method allows faster robot control while reducing computational load and memory usage.
 
-MobaXterm also comes with a lightweight X11 server, which enables graphical applications to be displayed directly when needed. Regardless of which controller you are using, MobaXterm鈥檚 SSH connection method is always supported.
+MobaXterm also comes with a lightweight X11 server, which enables graphical applications to be displayed directly when needed. Regardless of which controller you are using, MobaXterm’s SSH connection method is always supported.
 
 In a word, NoMachine and VNC are best for scenarios requiring intuitive, visual operation, while MobaXterm is better suited for fast command execution. Choose the remote-control software according to your specific needs.
 
@@ -1199,7 +1199,7 @@ In a word, NoMachine and VNC are best for scenarios requiring intuitive, visual 
 
 <img src="../_static/media/chapter_1\section_1/media/image244.png" style="width:600px" class="common_img" />
 
-3. Wait for the login window to appear, then follow the steps in order: enter the username 鈫?enter the password 鈫?check **Remember password** 鈫?click **OK**.
+3. Wait for the login window to appear, then follow the steps in order: enter the username → enter the password → check **Remember password** → click **OK**.
 
 Enter **pi** in the Username field, and enter **raspberrypi** in the Password field.
 
@@ -1213,7 +1213,7 @@ Enter **pi** in the Username field, and enter **raspberrypi** in the Password fi
 
 Taking the AP mode as an example, the same steps also apply to LAN mode, but you need to replace the IP address accordingly.
 
-1. On the main interface, click **Session** in the upper-right corner to create a new session. In the session window, enter the robot鈥檚 recorded IP address **192.168.149.1** and then click **OK**.
+1. On the main interface, click **Session** in the upper-right corner to create a new session. In the session window, enter the robot’s recorded IP address **192.168.149.1** and then click **OK**.
 
 <img src="../_static/media/chapter_1\section_1/media/image247.png" style="width:600px" class="common_img" />
 
@@ -1256,7 +1256,7 @@ For Raspberry Pi 5, the default username is **pi** and the password is **raspber
 >
 > * **If you want to configure the robot to use LAN Mode via your smartphone, make sure to enable the location service on your phone beforehand.**
 >
-> * **You cannot switch to LAN mode through the system鈥檚 default network settings, as shown in the figure below. Since the Wi-Fi has been specially configured, you will need to follow the network setup instructions provided later in this document.**
+> * **You cannot switch to LAN mode through the system’s default network settings, as shown in the figure below. Since the Wi-Fi has been specially configured, you will need to follow the network setup instructions provided later in this document.**
 >
 > * **After setting the robot to LAN mode, it will no longer broadcast a WiFi network starting with HW.**
 
@@ -1303,7 +1303,7 @@ sudo systemctl restart wifi.service
 > * **After restarting the robot's Wi-Fi service, NoMachine will disconnect automatically. This happens because the device is in LAN mode, and connecting to a different Wi-Fi network causes the IP address to change.**
 > * **To switch to Direct Connection Mode, simply edit the configuration file, comment out all the lines, save the changes, and restart the robot.**
 
-8. For instructions on finding the device鈥檚 IP address, refer to [1.5.2.2 LAN Mode Connection (Optional)](#anther5.2.2), then follow the steps in [1.7.2 AP Mode Connection Steps](#anther7.2), updating the IP address with the one you鈥檝e found.
+8. For instructions on finding the device’s IP address, refer to [1.5.2.2 LAN Mode Connection (Optional)](#anther5.2.2), then follow the steps in [1.7.2 AP Mode Connection Steps](#anther7.2), updating the IP address with the one you’ve found.
 
 ### 1.7.4 Fixed IP Connection via USB Data Cable
 
@@ -1333,7 +1333,7 @@ The robot can achieve smoother remote operation by enabling the remote NDIS-comp
 
 > [!NOTE]
 > 
-> * **After replacing the chassis with a different type, the robot鈥檚 chassis type must be updated in the software.**
+> * **After replacing the chassis with a different type, the robot’s chassis type must be updated in the software.**
 > * **The system is set to a Mecanum chassis by default. If using an Ackermann or differential chassis, the chassis type should be updated in the software first.**
 
 Steps:
@@ -1374,7 +1374,7 @@ After mapping is completed, the generated map will be saved. You can then enable
 
 Before starting the robot, first ensure that the remote desktop tool has been installed according to section [1.7 Development Environment Setup](#anther7.0), and that the connection to the robot has been established.
 
-Next, confirm that the wireless controller鈥檚 receiver is properly connected to the robot's USB port and securely plugged in.
+Next, confirm that the wireless controller’s receiver is properly connected to the robot's USB port and securely plugged in.
 
 ### 1.8.2 Operation Steps
 
@@ -1383,7 +1383,7 @@ Next, confirm that the wireless controller鈥檚 receiver is properly connected 
 > [!NOTE]
 > 
 > * **This section is intended for the Jetson Nano controller.**
-> * **This mode requires a pre-prepared enclosed space on a flat surface. If obstacles are placed, their height must exceed the Lidar鈥檚 horizontal level.**
+> * **This mode requires a pre-prepared enclosed space on a flat surface. If obstacles are placed, their height must exceed the Lidar’s horizontal level.**
 
 1. Place the robot in the prepared area, ensuring the space is spacious, flat, and enclosed to allow sufficient room for movement in all directions.
 
@@ -1462,7 +1462,7 @@ When pressing **W** or **S**, the robot will continuously move forward or backwa
 > [!NOTE]
 > 
 > * **This section applies to the Jetson Orin Nano, Jetson Orin NX, and Raspberry Pi 5 controllers.**
-> * **This mode requires a pre-prepared enclosed space on a flat surface. If obstacles are placed, their height must exceed the Lidar鈥檚 horizontal level.**
+> * **This mode requires a pre-prepared enclosed space on a flat surface. If obstacles are placed, their height must exceed the Lidar’s horizontal level.**
 
 1) Place the robot in the area where mapping will take place.
 2) Tap the touchscreen, select and open the SLAM icon for manual mapping.
@@ -1541,8 +1541,8 @@ When pressing **W** or **S**, the robot will continuously move forward or backwa
 > [!NOTE]
 > 
 > * **This section is intended for the Jetson Nano controller.**
-> * **Enabling this function starts the robot鈥檚 movement immediately, so it must be placed on a flat surface beforehand.**
-> * **This mode requires a pre-prepared enclosed space on a flat surface. If obstacles are placed, their height must exceed the Lidar鈥檚 horizontal level. The robot will stop automatically after completing autonomous mapping within the enclosed space.**
+> * **Enabling this function starts the robot’s movement immediately, so it must be placed on a flat surface beforehand.**
+> * **This mode requires a pre-prepared enclosed space on a flat surface. If obstacles are placed, their height must exceed the Lidar’s horizontal level. The robot will stop automatically after completing autonomous mapping within the enclosed space.**
 
 1) Tap the touchscreen, then select and open the SLAM Automatic icon for autonomous mapping.
 
@@ -1582,11 +1582,11 @@ When pressing **W** or **S**, the robot will continuously move forward or backwa
 
 <img src="../_static/media/chapter_1\section_1/media/image177.png" style="width:600px" />
 
-4\. In the software menu bar, **2D Pose Estimate** is used to set the robot鈥檚 initial position, **2D Nav Goal** is used to set a single target point, and **Publish Point** is used to set multiple target points.
+4\. In the software menu bar, **2D Pose Estimate** is used to set the robot’s initial position, **2D Nav Goal** is used to set a single target point, and **Publish Point** is used to set multiple target points.
 
 <img src="../_static/media/chapter_1\section_1/media/image178.png" width="552" height="27" />
 
-5\. Click the icon <img src="../_static/media/chapter_1\section_1/media/image179.png"  style="display:inline;vertical-align:middle;"/>, then click on the map to set a target point. Press and drag with the mouse to adjust the robot鈥檚 orientation after reaching the target. Once selected, the robot will automatically generate a path and move to the target point. 
+5\. Click the icon <img src="../_static/media/chapter_1\section_1/media/image179.png"  style="display:inline;vertical-align:middle;"/>, then click on the map to set a target point. Press and drag with the mouse to adjust the robot’s orientation after reaching the target. Once selected, the robot will automatically generate a path and move to the target point. 
 
 > [!NOTE]
 >
@@ -1626,17 +1626,17 @@ Clicking **Clear Goals** will remove all set target points.
 
 <img src="../_static/media/chapter_1\section_1/media/image273.png" style="width:600px" />
 
-3. In the software menu, **2D Pose Estimate** sets the robot鈥檚 initial position. **2D Goal Pose** sets a single target point for the robot, suitable for basic navigation tasks without considering obstacle avoidance or path planning. Publish Point sets multiple target points for the robot. **Nav2 Goal** sets more complex navigation goals, such as specifying a target point, a target orientation, or a target area.
+3. In the software menu, **2D Pose Estimate** sets the robot’s initial position. **2D Goal Pose** sets a single target point for the robot, suitable for basic navigation tasks without considering obstacle avoidance or path planning. Publish Point sets multiple target points for the robot. **Nav2 Goal** sets more complex navigation goals, such as specifying a target point, a target orientation, or a target area.
 
 <img src="../_static/media/chapter_1\section_1/media/image274.png" style="width:600px" />
 
-4. Click the icon <img src="../_static/media/chapter_1\section_1/media/image275.png" style="width:200px;display:inline;vertical-align:middle;"/> to adjust the robot鈥檚 initial position on the map so it matches its actual location.
+4. Click the icon <img src="../_static/media/chapter_1\section_1/media/image275.png" style="width:200px;display:inline;vertical-align:middle;"/> to adjust the robot’s initial position on the map so it matches its actual location.
 
-5. Click the icon <img src="../_static/media/chapter_1\section_1/media/image276.png"  style="width:150px;display:inline;vertical-align:middle;" />, then click on the map to set a target point. If you click and drag, you can also define the robot鈥檚 orientation after it reaches the target.
+5. Click the icon <img src="../_static/media/chapter_1\section_1/media/image276.png"  style="width:150px;display:inline;vertical-align:middle;" />, then click on the map to set a target point. If you click and drag, you can also define the robot’s orientation after it reaches the target.
 
 <img src="../_static/media/chapter_1\section_1/media/image277.png" style="width:600px" />
 
-6. Click the lower-left icon <img src="../_static/media/chapter_1\section_1/media/image278.png"  style="width:300px;display:inline;vertical-align:middle;"/> to enable multi-point navigation. Then, click the icon <img src="../_static/media/chapter_1\section_1/media/image279.png" style="width:100px;display:inline;vertical-align:middle;"/> once for each target point you want to set. Click and drag to define the robot鈥檚 orientation at each point. Repeat this process to add multiple target points.
+6. Click the lower-left icon <img src="../_static/media/chapter_1\section_1/media/image278.png"  style="width:300px;display:inline;vertical-align:middle;"/> to enable multi-point navigation. Then, click the icon <img src="../_static/media/chapter_1\section_1/media/image279.png" style="width:100px;display:inline;vertical-align:middle;"/> once for each target point you want to set. Click and drag to define the robot’s orientation at each point. Repeat this process to add multiple target points.
 
 > [!NOTE]
 >
@@ -1652,7 +1652,7 @@ Clicking **Clear Goals** will remove all set target points.
 
 ## 1.11 Hardware Introduction
 
-This section introduces the robot鈥檚 hardware, including the electronic control system, ROS controller, LiDAR, depth camera, and other sensors.
+This section introduces the robot’s hardware, including the electronic control system, ROS controller, LiDAR, depth camera, and other sensors.
 
 ### 1.11.1 Hardware System
 
@@ -1662,7 +1662,7 @@ Diagram of the STM32 controller ports:
 
 ### 1.11.2 Electronic Control System
 
-The robot鈥檚 electronic control system uses an STM32 controller as the low-level motion controller, connected to multiple DC geared motors with encoders. It also features a built-in IMU sensor with accelerometer and gyroscope, enabling chassis motion control and sensor data acquisition.
+The robot’s electronic control system uses an STM32 controller as the low-level motion controller, connected to multiple DC geared motors with encoders. It also features a built-in IMU sensor with accelerometer and gyroscope, enabling chassis motion control and sensor data acquisition.
 
 #### 1.11.2.1 STM32 Controller
 
@@ -1727,7 +1727,7 @@ The robot uses a dedicated 11.1V 6000mAh lithium battery.
   </tr>
   <tr>
     <td>Discharge Current</td>
-    <td>鈮?0A</td>
+    <td>≤10A</td>
     <td>Discharge Connector</td>
     <td>SM Connector, Anti-reverse</td>
   </tr>
@@ -1870,7 +1870,7 @@ The Ackerman chassis of the ROSOrin robot uses a PWM servo to steer the two fron
         </tr>
         <tr>
             <td>PWM Pulse Width Range</td>
-            <td>500~2500渭s, corresponds to 0~180掳</td>
+            <td>500~2500μs, corresponds to 0~180°</td>
         </tr>
         <tr>
             <td>Pulse Period</td>
@@ -1878,7 +1878,7 @@ The Ackerman chassis of the ROSOrin robot uses a PWM servo to steer the two fron
         </tr>
         <tr>
             <td>Rotation Speed</td>
-            <td>0.16sec/60掳 (DC 7.4V)</td>
+            <td>0.16sec/60° (DC 7.4V)</td>
         </tr>
         <tr>
             <td>Stall Torque</td>
@@ -1886,11 +1886,11 @@ The Ackerman chassis of the ROSOrin robot uses a PWM servo to steer the two fron
         </tr>
         <tr>
             <td>Rotation Range</td>
-            <td>0~180掳</td>
+            <td>0~180°</td>
         </tr>
         <tr>
             <td>Servo Accuracy</td>
-            <td>0.3掳</td>
+            <td>0.3°</td>
         </tr>
         <tr>
             <td>Wire Length</td>
@@ -1902,7 +1902,7 @@ The Ackerman chassis of the ROSOrin robot uses a PWM servo to steer the two fron
         </tr>
         <tr>
             <td>Dimensions</td>
-            <td>54.38mm 脳 20.04mm 脳 45.5mm</td>
+            <td>54.38mm × 20.04mm × 45.5mm</td>
         </tr>
         <tr>
             <td>Weight</td>
@@ -1966,23 +1966,23 @@ Specifications:
         </tr>
         <tr>
             <td>Dimensions</td>
-            <td>50mm 脳 20mm</td>
+            <td>50mm × 20mm</td>
         </tr>
         <tr>
             <td rowspan="7">0.91-inch Blue OLED Screen Specifications</td>
-            <td>Resolution: 128 脳 32</td>
+            <td>Resolution: 128 × 32</td>
         </tr>
         <tr>
-            <td>Outline Dimensions (mm): 30.0 脳 11.50 脳 1.45</td>
+            <td>Outline Dimensions (mm): 30.0 × 11.50 × 1.45</td>
         </tr>
         <tr>
-            <td>Display Area (mm): 22.384 脳 5.584</td>
+            <td>Display Area (mm): 22.384 × 5.584</td>
         </tr>
         <tr>
-            <td>Pixel Pitch (mm): 0.175 脳 0.175</td>
+            <td>Pixel Pitch (mm): 0.175 × 0.175</td>
         </tr>
         <tr>
-            <td>Pixel Size (mm): 0.159 脳 0.159</td>
+            <td>Pixel Size (mm): 0.159 × 0.159</td>
         </tr>
         <tr>
             <td>Driver Chip: SSD1306</td>
@@ -2125,7 +2125,7 @@ The expansion board exposes the LED indicators and control buttons, enabling net
 
 The robot is equipped with a Deptrum depth camera.
 
-The Aurora930, part of the Deptrum庐 Aurora 930 series, uses 3D structured light technology to capture the three-dimensional structure of objects and spaces. Fusing RGB images from the color camera with depth data, it provides efficient and convenient 3D perception capabilities.
+The Aurora930, part of the Deptrum® Aurora 930 series, uses 3D structured light technology to capture the three-dimensional structure of objects and spaces. Fusing RGB images from the color camera with depth data, it provides efficient and convenient 3D perception capabilities.
 
 Its specifications are shown in the diagram and table below.
 
@@ -2133,7 +2133,7 @@ Its specifications are shown in the diagram and table below.
     <tr>
         <td rowspan="12" style="vertical-align: middle; text-align: center;">Module Parameters</td>
         <td>Overall Size</td>
-        <td>76.5 脳 20.7 脳 21.8 mm</td>
+        <td>76.5 × 20.7 × 21.8 mm</td>
     </tr>
     <tr>
         <td>Baseline</td>
@@ -2157,7 +2157,7 @@ Its specifications are shown in the diagram and table below.
     </tr>
     <tr>
         <td>Operating Temperature</td>
-        <td>-10掳C~55掳C</td>
+        <td>-10°C~55°C</td>
     </tr>
     <tr>
         <td>Operating Humidity</td>
@@ -2169,7 +2169,7 @@ Its specifications are shown in the diagram and table below.
     </tr>
     <tr>
         <td>Power Supply</td>
-        <td>5V卤10%, 1.5A</td>
+        <td>5V±10%, 1.5A</td>
     </tr>
     <tr>
         <td>Power Consumption</td>
@@ -2186,7 +2186,7 @@ Its specifications are shown in the diagram and table below.
     </tr>
     <tr>
         <td>Depth Resolution/Frame Rate</td>
-        <td>640脳400/12fps/ 74掳脳51掳</td>
+        <td>640×400/12fps/ 74°×51°</td>
     </tr>
     <tr>
         <td>Color Data Format</td>
@@ -2194,7 +2194,7 @@ Its specifications are shown in the diagram and table below.
     </tr>
     <tr>
         <td>Color Resolution/Frame Rate</td>
-        <td>640脳400/12fps/ 74掳脳51掳</td>
+        <td>640×400/12fps/ 74°×51°</td>
     </tr>
     <tr>
         <td>Infrared Data Format</td>
@@ -2202,7 +2202,7 @@ Its specifications are shown in the diagram and table below.
     </tr>
     <tr>
         <td>Infrared Resolution/Frame Rate</td>
-        <td>640脳400/12fps/ 74掳脳51掳</td>
+        <td>640×400/12fps/ 74°×51°</td>
     </tr>
     <tr>
         <td rowspan="2" style="vertical-align: middle; text-align: center;">Firmware Capabilities</td>
@@ -2246,7 +2246,7 @@ The robot is equipped with the MS200 LiDAR.
     </tr>
     <tr>
         <td>Scanning Range</td>
-        <td>360掳</td>
+        <td>360°</td>
         <td>Measurement Radius</td>
         <td>Black Object: 12m</td>
     </tr>
@@ -2260,7 +2260,7 @@ The robot is equipped with the MS200 LiDAR.
         <td>Scanning Frequency</td>
         <td>7~15Hz, Default 10Hz</td>
         <td>Angular Resolution</td>
-        <td>0.4掳 @5Hz 0.8掳@10Hz</td>
+        <td>0.4° @5Hz 0.8°@10Hz</td>
     </tr>
     <tr>
         <td>Supply Current</td>
@@ -2270,13 +2270,13 @@ The robot is equipped with the MS200 LiDAR.
     </tr>
     <tr>
         <td>Operating Temperature</td>
-        <td>-10掳~ 50掳</td>
+        <td>-10°~ 50°</td>
         <td rowspan="2" style="vertical-align: middle; text-align: center;">Distance Accuracy</td>
         <td rowspan="2" style="vertical-align: middle;">&le; 4mm [0.1 m~2m)<br>&le; 15mm [2m~12m]</td>
     </tr>
     <tr>
         <td>Product Size</td>
-        <td>37.7 脳 37.5 脳 32.5 mm</td>
+        <td>37.7 × 37.5 × 32.5 mm</td>
     </tr>
 </table>
 
@@ -2330,11 +2330,11 @@ Wiring Instructions:
 
 This is an optional hardware module that enables voice wake-up and voice control functions on the robot. For related tutorials, please refer to the document [8. Voice Interaction Applications](https://wiki.hiwonder.com/projects/ROSOrin/en/latest/docs/8_Voice_Control_Course.html#voice-interaction-applications).
 
-The robot is equipped with an R818 noise reduction board and a circular six-microphone array. The microphones are arranged in a planar layout to capture and process the spatial characteristics of the sound field. The system supports sound source localization, background noise suppression, interference and echo reduction, enabling 360掳 effective audio capture.
+The robot is equipped with an R818 noise reduction board and a circular six-microphone array. The microphones are arranged in a planar layout to capture and process the spatial characteristics of the sound field. The system supports sound source localization, background noise suppression, interference and echo reduction, enabling 360° effective audio capture.
 
 **R818 Noise Reduction Board:**
 
-The R818 board is a multi-microphone voice front-end solution. It features a quad-core high-performance edge computing processor. Integrated with iFLYTEK鈥檚 voice algorithms, it utilizes the microphone array鈥檚 spatial filtering capability to locate the speaker, form a directional pickup beam, and suppress off-axis noise, achieving clearer and more accurate far-field voice capture. For human-robot interaction devices, it also includes a high-performance echo cancellation algorithm, reducing the difficulty in speech and semantic recognition. This allows developers to quickly integrate features such as multi-microphone audio capture, wake-up, noise reduction, and echo cancellation.
+The R818 board is a multi-microphone voice front-end solution. It features a quad-core high-performance edge computing processor. Integrated with iFLYTEK’s voice algorithms, it utilizes the microphone array’s spatial filtering capability to locate the speaker, form a directional pickup beam, and suppress off-axis noise, achieving clearer and more accurate far-field voice capture. For human-robot interaction devices, it also includes a high-performance echo cancellation algorithm, reducing the difficulty in speech and semantic recognition. This allows developers to quickly integrate features such as multi-microphone audio capture, wake-up, noise reduction, and echo cancellation.
 
 <img src="../_static/media/chapter_1\section_1/media/image39.png" style="width:600px" />
 
@@ -2374,11 +2374,11 @@ The R818 board is a multi-microphone voice front-end solution. It features a qua
 
 ## 1.12. ROS Introduction
 
-The ROS robot鈥檚 core system consists of two main parts. The first is chassis control, driven by the STM32 controller, responsible for robot motion control and sensor data acquisition. The second is ROS control, centered on the ROS main controller, which runs the ROS system and associated functional algorithms.
+The ROS robot’s core system consists of two main parts. The first is chassis control, driven by the STM32 controller, responsible for robot motion control and sensor data acquisition. The second is ROS control, centered on the ROS main controller, which runs the ROS system and associated functional algorithms.
 
 ### 1.12.1 ROS Controller Hardware Connection
 
-The standard connection setup requires a power cable and a USB serial cable. Communication between the STM32 controller and the ROS controller is established via the onboard USB serial interface. The ROS controller can be powered directly through the STM32鈥檚 power output port. The connection diagram is shown below:
+The standard connection setup requires a power cable and a USB serial cable. Communication between the STM32 controller and the ROS controller is established via the onboard USB serial interface. The ROS controller can be powered directly through the STM32’s power output port. The connection diagram is shown below:
 
 <img src="../_static/media/chapter_1\section_1/media/image10.png" style="width:600px" />
 
@@ -2396,15 +2396,15 @@ For detailed information on the communication protocol and its parsing, refer to
 
 ### 1.13.1 Introduction
 
-The STM32 controller serves as the robot鈥檚 underlying motion control unit. It comes pre-flashed with the corresponding firmware at the factory and is ready for immediate use. For most ROS development purposes, updating the STM32 firmware is not necessary. However, users who wish to perform low-level STM32 development can update or debug the STM32 code as needed.
+The STM32 controller serves as the robot’s underlying motion control unit. It comes pre-flashed with the corresponding firmware at the factory and is ready for immediate use. For most ROS development purposes, updating the STM32 firmware is not necessary. However, users who wish to perform low-level STM32 development can update or debug the STM32 code as needed.
 
-The STM32 controller supports ISP updates via the USB serial interface and can also be updated or debugged through the SWD interface. As the robot鈥檚 low-level driver board, the STM32 is responsible for motor PID control, encoder and IMU data acquisition, RGB control, and supports multiple control methods, including PS2 wireless controller, app via Bluetooth, and RC transmitter. It communicates with the ROS-based chassis driver node via serial interface, receiving target velocity vectors from the ROS core and sending back real-time speed calculated from odometry, IMU data, and battery voltage information. To better support these functions, the STM32 runs software built on the FreeRTOS embedded operating system.
+The STM32 controller supports ISP updates via the USB serial interface and can also be updated or debugged through the SWD interface. As the robot’s low-level driver board, the STM32 is responsible for motor PID control, encoder and IMU data acquisition, RGB control, and supports multiple control methods, including PS2 wireless controller, app via Bluetooth, and RC transmitter. It communicates with the ROS-based chassis driver node via serial interface, receiving target velocity vectors from the ROS core and sending back real-time speed calculated from odometry, IMU data, and battery voltage information. To better support these functions, the STM32 runs software built on the FreeRTOS embedded operating system.
 
 The STM32 source code for the STM32 controller can be found in the folder [3. Source Code / STM32](https://drive.google.com/drive/folders/1p0jbaTP2Rz_vNw9noJqti7kszAbOuTUw). For a detailed explanation of the implementation principles and code analysis, refer to [4. Hardware Materials \\ 1 STM32 Controller Resources](https://drive.google.com/drive/folders/1ITrr0a_EAi3al5hOrIHmCNFlZunjZ0LM?usp=sharing).
 
 ### 1.13.2 Control Process
 
-The robot supports multiple control methods, all based on adjusting the robot鈥檚 target velocity. The target velocity is processed through inverse kinematics to calculate the desired motor speeds, which serve as inputs to the motor PID controllers. After PID computation, PWM control signals are output via the STM32 timers to the motor drivers. The motor drivers then control the motor rotation, while encoders collect the real-time motor speed and feed it back to the PID controllers, forming a closed-loop speed control system. The STM32 motor control flow for the robot is shown below.
+The robot supports multiple control methods, all based on adjusting the robot’s target velocity. The target velocity is processed through inverse kinematics to calculate the desired motor speeds, which serve as inputs to the motor PID controllers. After PID computation, PWM control signals are output via the STM32 timers to the motor drivers. The motor drivers then control the motor rotation, while encoders collect the real-time motor speed and feed it back to the PID controllers, forming a closed-loop speed control system. The STM32 motor control flow for the robot is shown below.
 
 <img src="../_static/media/chapter_1\section_1/media/image187.png"  style="width:600px" />
 
@@ -2426,7 +2426,7 @@ For a more detailed explanation of the STM32 code, refer directly to the source 
 
 The software supports multiple robot chassis types, each with distinct characteristics.
 
-Mecanum wheels enable full 360掳 omnidirectional movement, allowing the robot not only to move forward and turn but also to translate in any planar direction.
+Mecanum wheels enable full 360° omnidirectional movement, allowing the robot not only to move forward and turn but also to translate in any planar direction.
 
 Ackerman chassis operates like a car, with front-wheel steering controlled by servos.
 
@@ -2440,7 +2440,7 @@ The compiler generates target files based on the processor architecture and inst
 
 1. Enable the option to generate a hex file:
    
-   (1) In the menu bar, click **Project**, then select **Options for File 鈥榓pp.c鈥?*.
+   (1) In the menu bar, click **Project**, then select **Options for File ‘app.c’**.
    
    <img src="../_static/media/chapter_1\section_1/media/image189.png"  style="width:600px" />
    
@@ -2488,7 +2488,7 @@ The following steps illustrate the procedure, using the program **RosRobotContro
 
 **(1) Hardware Connection**
 
-Connect the Type-C cable to the STM32 controller鈥檚 Type-C port (UART1) and the computer鈥檚 USB port: UART1
+Connect the Type-C cable to the STM32 controller’s Type-C port (UART1) and the computer’s USB port: UART1
 
 <img src="../_static/media/chapter_1\section_1/media/image196.png" style="width:400px" />
 
@@ -2754,8 +2754,8 @@ Jetson Orin NX
 
 <img src="../_static/media/chapter_1\section_1/media/image292.png" style="width:600px" class="common_img"  />
 
-2) In the provided materials, locate the compressed package under **2. Softwares \\ 3. Image Flashing Tools \\ 1. Disk Formatting Tool**, extract it, and open **DiskGenius.exe** to format the SD card or SSD. Make sure you select the correct drive. Choosing the wrong drive may result in formatting your computer鈥檚 hard disk.
-3) After inserting the SD card or SSD into the computer, you will see an additional drive letter appear besides those of your computer鈥檚 own drives.
+2) In the provided materials, locate the compressed package under **2. Softwares \\ 3. Image Flashing Tools \\ 1. Disk Formatting Tool**, extract it, and open **DiskGenius.exe** to format the SD card or SSD. Make sure you select the correct drive. Choosing the wrong drive may result in formatting your computer’s hard disk.
+3) After inserting the SD card or SSD into the computer, you will see an additional drive letter appear besides those of your computer’s own drives.
 
 <img src="../_static/media/chapter_1\section_1/media/image293.png" style="width:600px" class="common_img"  />
 

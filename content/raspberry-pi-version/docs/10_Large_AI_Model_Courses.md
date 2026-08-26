@@ -1632,7 +1632,7 @@ vim /home/ubuntu/ros2_ws/src/large_models/large_models/large_models/config.py
 
 Before starting features, verify that the correct microphone configuration is set in the system.
 
-1. After remotely logging in via VNC, click the desktop icon <img style="display:inline;vertical-align:middle;width:50px" class="common_img" src="../_static/media/chapter_22/section_1/media/image16.png" /> to access the configuration interface.
+1. After remotely logging in via VNC, click the desktop icon <img style="display:inline;vertical-align:middle;width:50px"  class="common_img" src="../_static/media/chapter_22/section_1/media/image16.png" /> to access the configuration interface.
 
 2. Select the appropriate microphone version configuration according to the hardware.
 

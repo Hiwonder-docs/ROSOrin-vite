@@ -1,5 +1,6 @@
 # Appendix
 
+- Google Drive: [ROSOrin Resources](https://drive.google.com/drive/folders/1CdWc8_aKkCjF3wer7S64FABitaiRAc5v?usp=sharing)
 - System Image & Source Code：If you want to get the system image and source code, please email us at support@hiwonder.com, and share your order number :)
 - APP Installation Pack (Android)：[WonderAi](https://play.google.com/store/apps/details?id=com.hiwonder.wonderai)
 - APP Installation Pack (iOS)：[WonderAi](https://apps.apple.com/cn/app/wonderai/id1561134103)

@@ -1,4 +1,4 @@
-﻿# 16\. ROS2-ROS+Machine Learning Course
+# 16\. ROS2-ROS+Machine Learning Course
 
 ## 16.1 MediaPipe Human-Robot Interaction
 
@@ -60,7 +60,7 @@ dlib github: *https://github.com/davisking/dlib*
 
 ### 16.1.2 Background Segmentation
 
-In this lesson, MediaPipe鈥檚 Selfie Segmentation model is used to segment trained models from the background and then apply a virtual background, such as a face or a hand.
+In this lesson, MediaPipe’s Selfie Segmentation model is used to segment trained models from the background and then apply a virtual background, such as a face or a hand.
 
 #### 16.1.2.1 Experiment Overview
 
@@ -238,7 +238,7 @@ The model within `mediapipe` is loaded, the image is passed as input, and the ou
 
 #### 16.1.3.1 Experiment Overview
 
-First, import MediaPipe鈥檚 3D Objection and subscribe to the topic messages to obtain the real-time camera feed.
+First, import MediaPipe’s 3D Objection and subscribe to the topic messages to obtain the real-time camera feed.
 
 Next, apply preprocessing steps such as image flipping, and then perform 3D object detection on the images.
 
@@ -404,7 +404,7 @@ Loads the model from `mediapipe`, feeds the image into the model, and then uses 
 
 ### 16.1.4 Face Detection
 
-In this program, MediaPipe鈥檚 face detection model is utilized to detect a human face within the camera image.
+In this program, MediaPipe’s face detection model is utilized to detect a human face within the camera image.
 
 MediaPipe Face Detection is a high-speed face detection solution that provides six key landmarks and supports multiple faces. Based on BlazeFace, a lightweight and efficient face detector optimized for mobile GPU inference.
 
@@ -414,7 +414,7 @@ First, import the MediaPipe face detection model and subscribe to the topic mess
 
 Next, use OpenCV to process the image, including flipping and converting the color space.
 
-Next, the system compares the detection confidence against the model鈥檚 minimum threshold to determine if face detection is successful. Once a face is detected, the system will analyze the set of facial features. Each face is represented as a detection message that contains a bounding box and six key landmarks, including right eye, left eye, nose tip, mouth center, right ear region, and left ear region.
+Next, the system compares the detection confidence against the model’s minimum threshold to determine if face detection is successful. Once a face is detected, the system will analyze the set of facial features. Each face is represented as a detection message that contains a bounding box and six key landmarks, including right eye, left eye, nose tip, mouth center, right ear region, and left ear region.
 
 Finally, the face will be outlined with a bounding box, and the six key landmarks will be marked on the image.
 
@@ -572,7 +572,7 @@ Additionally, the solution is bundled with a face transformation module that bri
 
 #### 16.1.5.1 Experiment Overview
 
-First, it鈥檚 important to understand that the machine learning pipeline used here, which can be thought of as a linear process, consists of two real-time deep neural network models working in tandem: One is a detector that processes the full image to locate faces. The other is a face landmark model that operates on those locations and uses regression to predict an approximate 3D surface.
+First, it’s important to understand that the machine learning pipeline used here, which can be thought of as a linear process, consists of two real-time deep neural network models working in tandem: One is a detector that processes the full image to locate faces. The other is a face landmark model that operates on those locations and uses regression to predict an approximate 3D surface.
 
 For the 3D face landmarks, transfer learning was applied, and a multi-task network was trained. This network simultaneously predicts 3D landmark coordinates on synthetic rendered data and 2D semantic contours on annotated real-world data. As a result, the network is informed by both synthetic and real-world data, allowing for accurate 3D landmark prediction.
 
@@ -732,7 +732,7 @@ Loads the model from MediaPipe, feeds the image into it, and uses OpenCV to draw
 
 ### 16.1.6 Hand Keypoint Detection
 
-In this lesson, MediaPipe鈥檚 hand detection model is used to display hand keypoints and the connecting lines between them on the returned image.
+In this lesson, MediaPipe’s hand detection model is used to display hand keypoints and the connecting lines between them on the returned image.
 
 MediaPipe Hands is a high-fidelity hand and finger tracking model. It uses machine learning (ML) to infer 21 3D landmarks of a hand from a single frame.
 
@@ -744,7 +744,7 @@ After importing the hand detection model, the system subscribes to topic message
 
 In addition, the pipeline can generate crops based on the hand landmarks recognized in the previous frame. The palm detection model is only invoked to re-locate the hand when the landmark model can no longer detect its presence.
 
-Next, the system compares the detection confidence against the model鈥檚 minimum threshold to determine if hand detection is successful.
+Next, the system compares the detection confidence against the model’s minimum threshold to determine if hand detection is successful.
 
 Finally, it detects and draws the hand keypoints on the output image.
 
@@ -896,7 +896,7 @@ The image callback function is used to read data from the camera node and enqueu
         rclpy.shutdown()
 ```
 
-Loads the model from MediaPipe, feeds the image into it, and uses OpenCV to draw the hand鈥檚 keypoints and display the returned video feed.
+Loads the model from MediaPipe, feeds the image into it, and uses OpenCV to draw the hand’s keypoints and display the returned video feed.
 
 
 
@@ -916,7 +916,7 @@ Then, the program applies image preprocessing such as flipping and converting th
 
 Next, it uses a minimum tracking confidence threshold to decide whether the detected pose can be reliably tracked. If not, the model will automatically re-invoke detection on the next input image.
 
-The pipeline first identifies the region of interest (ROI) containing the person鈥檚 pose in the frame using a detector. The tracker then uses the cropped ROI image as input to predict pose landmarks and segmentation masks within that area. For video applications, the detector is only invoked when necessary鈥攕uch as for the first frame or when the tracker fails to identify a pose from the previous frame. For all other frames, the ROI is derived from the previously tracked landmarks.
+The pipeline first identifies the region of interest (ROI) containing the person’s pose in the frame using a detector. The tracker then uses the cropped ROI image as input to predict pose landmarks and segmentation masks within that area. For video applications, the detector is only invoked when necessary—such as for the first frame or when the tracker fails to identify a pose from the previous frame. For all other frames, the ROI is derived from the previously tracked landmarks.
 
 After importing the MediaPipe pose detection model, you can subscribe to the topic messages to obtain the real-time video stream from the camera.
 
@@ -1115,7 +1115,7 @@ cd ~/ros2_ws/src/example/example/mediapipe_example && python3 hand_gesture.py
 
 #### 16.1.8.3 Project Outcome
 
-After starting the feature, place your hand within the camera鈥檚 field of view. Once the hand is detected, key points of the hand will be marked in the returned image.
+After starting the feature, place your hand within the camera’s field of view. Once the hand is detected, key points of the hand will be marked in the returned image.
 
 If the gesture **1**, which involves extending the index finger, is detected, the robot will immediately enter recording mode. The system will track and display the movement of the fingertip in real time on the returned image using dynamic lines. This feature enables free drawing in the virtual space with simple gestures.
 
@@ -1261,13 +1261,13 @@ After identifying the types of fingers on the hand and determining their positio
 
 In the `h_gesture` function shown in the diagram above, the parameters `thr_angle = 65`, `thr_angle_thenum=53`,
 
-and `thr_angle_s=49` represent the angle threshold values for the corresponding gesture logic points. These values have been tested and found to provide stable recognition results. It is not recommended to change them. If the recognition performance is suboptimal, adjusting the values within 卤5 is sufficient. The `angle_list[0, 1, 2, 3, 4]` corresponds to the five fingers of the hand.
+and `thr_angle_s=49` represent the angle threshold values for the corresponding gesture logic points. These values have been tested and found to provide stable recognition results. It is not recommended to change them. If the recognition performance is suboptimal, adjusting the values within ±5 is sufficient. The `angle_list[0, 1, 2, 3, 4]` corresponds to the five fingers of the hand.
 
 Taking the gesture **one** as an example:
 
 <img src="../_static/media/chapter_15/section_1/media/image62.png"  style="width:600px"  class="common_img" />
 
-The code shown above represents the finger angle logic for the gesture **one**. `angle_list[0]&gt;5` checks whether the angle of the thumb joint feature point in the image is greater than 5. `angle_list[1]&lt;thr_angle_s` checks whether the angle feature of the index finger joint is smaller than the predefined value `thr_angle_s锛宎ngle_list[2]&lt;thr_angle` checks whether the angle feature of the middle finger joint is smaller than the predefined value `thr_angle`. The logic for the other two fingers, `angle_list[3],angle_list[4]`, follows a similar approach. When all these conditions are met, the current hand gesture is recognized as **one**. The recognition of other gestures follows a similar approach.
+The code shown above represents the finger angle logic for the gesture **one**. `angle_list[0]&gt;5` checks whether the angle of the thumb joint feature point in the image is greater than 5. `angle_list[1]&lt;thr_angle_s` checks whether the angle feature of the index finger joint is smaller than the predefined value `thr_angle_s，angle_list[2]&lt;thr_angle` checks whether the angle feature of the middle finger joint is smaller than the predefined value `thr_angle`. The logic for the other two fingers, `angle_list[3],angle_list[4]`, follows a similar approach. When all these conditions are met, the current hand gesture is recognized as **one**. The recognition of other gestures follows a similar approach.
 
 Each gesture has its own logic, but the overall framework is largely the same, and other gestures can be referenced based on this method.
 
@@ -1366,7 +1366,7 @@ Initializes all required components and calls the camera node.
 
 Using the human pose estimation model trained with the MediaPipe machine learning framework, the system detects the human pose in the camera feed and marks the relevant joint positions. Based on this, multiple actions can be recognized in sequence, allowing direct control of the robot through body gestures.
 
-From the robot鈥檚 first-person perspective:  
+From the robot’s first-person perspective:  
 Raising the left arm causes the robot to move a certain distance to the right. Raising the right arm causes the robot to move a certain distance to the left. Raising the left leg causes the robot to move forward a certain distance. Raising the right leg causes the robot to move backward a certain distance.
 
 #### 16.1.9.1 Experiment Overview
@@ -1407,7 +1407,7 @@ ros2 launch example body_control.launch.py
 
 #### 16.1.9.3 Project Outcome
 
-After starting the feature, stand within the camera鈥檚 field of view. When a human body is detected, the returned video feed will display the key points of the torso along with lines connecting them.
+After starting the feature, stand within the camera’s field of view. When a human body is detected, the returned video feed will display the key points of the torso along with lines connecting them.
 
 An intuitive body posture control logic has been designed for the robot, allowing control through simple body movements. The control instructions are as follows:
 
@@ -1633,7 +1633,7 @@ The image topic callback function processes images and places them into a queue.
         self.move_finish = True
 ```
 
-Motion strategy function controls the robot鈥檚 movement according to the detected body actions.
+Motion strategy function controls the robot’s movement according to the detected body actions.
 
 `buzzer_warn`:
 
@@ -1743,7 +1743,7 @@ ros2 launch example body_track.launch.py
 
 #### 16.1.10.3 Project Outcome
 
-After the feature is enabled, a person stands within the camera's field of view. When detected, the center point of the person鈥檚 body will be marked in the live feed.
+After the feature is enabled, a person stands within the camera's field of view. When detected, the center point of the person’s body will be marked in the live feed.
 
 Using the depth camera, the robot can sense the distance to the person in real-time and automatically adjust its position to maintain a safe and comfortable distance of approximately 3 meters. When the person approaches, the robot will move backward. When the person moves away, the robot will move forward.
 
@@ -1928,13 +1928,13 @@ vim body_track.py
 
 <img src="../_static/media/chapter_15/section_1/media/image98.png" style="width:600px"  class="common_img" />
 
-The three PID parameters鈥攑roportional, integral, and derivative鈥攕erve different purposes: the proportional adjusts the response level, the integral smooths the response, and the derivative helps control overshoot.
+The three PID parameters—proportional, integral, and derivative—serve different purposes: the proportional adjusts the response level, the integral smooths the response, and the derivative helps control overshoot.
 
 4. To adjust the tracking speed, press the i key to enter edit mode, then increase the values. For example, set the linear velocity PID to 0.05 to boost the tracking speed.
 
 > [!NOTE]
 > 
-> **It鈥檚 recommended not to increase the parameters too much, as doing so can cause the robot to track too quickly and negatively impact the feature.**
+> **It’s recommended not to increase the parameters too much, as doing so can cause the robot to track too quickly and negatively impact the feature.**
 
 <img src="../_static/media/chapter_15/section_1/media/image99.png" style="width:600px"  class="common_img" />
 
@@ -1988,7 +1988,7 @@ ros2 launch example body_and_rgb_control.launch.py
 
 #### 16.1.11.3 Project Outcome
 
-After starting the feature, stand within the camera鈥檚 field of view. When a person is detected, the camera feed will display the torso key points, lines connecting the points, and the body鈥檚 center point.
+After starting the feature, stand within the camera’s field of view. When a person is detected, the camera feed will display the torso key points, lines connecting the points, and the body’s center point.
 
 Step 1: Adjust the camera slightly higher and maintain a reasonable distance to ensure the full body is captured.
 
@@ -2008,7 +2008,7 @@ Backward movement: Raise the right leg, and the robot will move backward.
 
 <img src="../_static/media/chapter_15/section_1/media/image103.png"  style="width:600px"  class="common_img" />
 
-Step 4: If someone wearing a different color enters the camera鈥檚 field of view, they will not be able to control the robot.
+Step 4: If someone wearing a different color enters the camera’s field of view, they will not be able to control the robot.
 
 <img src="../_static/media/chapter_15/section_1/media/image104.png"  style="width:600px"  class="common_img" />
 
@@ -2279,7 +2279,7 @@ The image topic callback function processes images and places them into a queue.
         self.move_finish = True
 ```
 
-Motion strategy function controls the robot鈥檚 movement according to the detected body actions.
+Motion strategy function controls the robot’s movement according to the detected body actions.
 
 `buzzer_warn`:
 
@@ -2389,7 +2389,7 @@ ros2 launch example fall_down_detect.launch.py
 
 #### 16.1.12.3 Project Outcome
 
-After starting the feature, make sure the person is fully within the camera鈥檚 field of view. When a person is detected, the keypoints of the body will be marked on the live feed.
+After starting the feature, make sure the person is fully within the camera’s field of view. When a person is detected, the keypoints of the body will be marked on the live feed.
 
 When the person appears with a significantly low height in the camera feed, the robot will recognize it as a falling posture and initiate an emergency response. The robot will emit a continuous alarm sound and move rapidly back and forth.
 
@@ -2545,7 +2545,7 @@ The image topic callback function processes images and places them into a queue.
         self.move_finish = True
 ```
 
-Motion strategy function controls the robot鈥檚 movement according to the detected body height.
+Motion strategy function controls the robot’s movement according to the detected body height.
 
 `buzzer_warn`:
 
@@ -2619,7 +2619,7 @@ The main function within the `FallDownDetectNode` class is responsible for feedi
 
 ## 16.2 Autonomous Driving
 
-Before starting, it鈥檚 important to familiarize yourself with the map and the placement of relevant props.
+Before starting, it’s important to familiarize yourself with the map and the placement of relevant props.
 
 The map should be laid on a flat surface, ensuring it is smooth without wrinkles, and that the road is clear of any obstacles. All road signs and traffic lights must be placed at the designated positions on the map, facing clockwise along the route. The positions of the road signs and the starting point are shown in the figure below.
 
@@ -2645,7 +2645,7 @@ First, real-time images are captured using the camera.
 
 Next, the images are processed. This includes color detection, converting the detected images into a suitable color space, applying erosion and dilation, and performing binarization.
 
-Finally, the processed images are analyzed. The region of interest (ROI) is extracted, contours are identified, and comparisons are made to determine the car鈥檚 position relative to the lane.
+Finally, the processed images are analyzed. The region of interest (ROI) is extracted, contours are identified, and comparisons are made to determine the car’s position relative to the lane.
 
 Based on the comparison results, the forward direction is adjusted to keep the robot centered in the lane.
 
@@ -2761,7 +2761,7 @@ Retrieves the largest contour from a list of contours obtained via `opencv`.
 
 ```python
     def add_horizontal_line(self, image):
-        #   |____  --->   |鈥斺€斺€斺€?  ---> 鈥斺€?
+        #   |____  --->   |————   ---> ——
         h, w = image.shape[:2]
         roi_w_min = int(w/2)
         roi_w_max = w
@@ -2789,10 +2789,10 @@ Adds horizontal lines for detection based on the image width, height, and ROI.
         flip_binary = cv2.flip(roi, -1)  # Flip the image horizontally and vertically
         #cv2.imshow('1', flip_binary)
         # min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(ret)
-        # minVal锛歍he minimum value
-        # maxVal锛歍he maximum value
-        # minLoc锛歍he location of the minimum value
-        # maxLoc锛歍he location of the maximum value
+        # minVal：The minimum value
+        # maxVal：The maximum value
+        # minLoc：The location of the minimum value
+        # maxLoc：The location of the maximum value
         # The order of traversal is: first rows, then columns, with rows from left to right and columns from top to bottom
         (x_0, y_0) = cv2.minMaxLoc(flip_binary)[-1]  # Extract the coordinates of the top-left point with a value of 255
         y_center = y_0 + 55
@@ -2916,7 +2916,7 @@ Adds vertical detection lines in the near area of the image based on ROI and ima
         return result_image, angle, max_center_x, max_area
 ```
 
-The class鈥檚 callback function performs color recognition, draws detected yellow lines using OpenCV, and outputs the processed image, the line angles, and the pixel coordinates (X) of each ROI contour.
+The class’s callback function performs color recognition, draws detected yellow lines using OpenCV, and outputs the processed image, the line angles, and the pixel coordinates (X) of each ROI contour.
 
 
 
@@ -3002,7 +3002,7 @@ The value in the red box represents the confidence threshold, which can be adjus
 
 #### 16.2.2.4 Program Outcome
 
-After launching the feature, place the robot on the map鈥檚 road. When the robot detects a traffic sign, it will highlight the detected sign and display the label with the highest confidence based on the trained model.
+After launching the feature, place the robot on the map’s road. When the robot detects a traffic sign, it will highlight the detected sign and display the label with the highest confidence based on the trained model.
 
 <img src="../_static/media/chapter_15/section_2/media/image26.png"  style="width:600px"  class="common_img" />
 
@@ -3094,7 +3094,7 @@ The value highlighted in red represents the confidence threshold, which can be a
 
 #### 16.2.3.4 Program Outcome
 
-Once the feature is started, place the robot on the map鈥檚 road. When the robot detects a traffic light, it will identify the light鈥檚 color and highlight red and green signals accordingly.
+Once the feature is started, place the robot on the map’s road. When the robot detects a traffic light, it will identify the light’s color and highlight red and green signals accordingly.
 
 <img src="../_static/media/chapter_15/section_2/media/image27.png"  style="width:600px"  class="common_img" />
 
@@ -3184,7 +3184,7 @@ The value highlighted in red represents the confidence threshold, which can be a
 
 #### 16.2.4.4 Program Outcome
 
-After starting the feature, place the robot on the map road. When the robot approaches a turn sign, it will adjust its direction of travel according to the sign鈥檚 instruction.
+After starting the feature, place the robot on the map road. When the robot approaches a turn sign, it will adjust its direction of travel according to the sign’s instruction.
 
 <img src="../_static/media/chapter_15/section_2/media/image28.png"  style="width:600px"  class="common_img" />
 
@@ -3274,7 +3274,7 @@ The value highlighted in red represents the confidence threshold, which can be a
 
 #### 16.2.5.4 Program Outcome
 
-After starting the feature, place the robot on the roadway of the map. When the robot reaches the parking sign, it will follow the sign鈥檚 instructions and automatically park in the designated spot.
+After starting the feature, place the robot on the roadway of the map. When the robot reaches the parking sign, it will follow the sign’s instructions and automatically park in the designated spot.
 
 #### 16.2.5.5 Parameter Adjustment
 
@@ -3334,7 +3334,7 @@ First, load the YOLOv5-trained model file along with the required libraries, and
 
 Next, detect the target color line in the image, and extract key information such as the size and center point of the detected region. Then, apply the YOLOv5 model to compare the processed image with the target dataset.
 
-Finally, calculate the offset of the target center point, and adjust the robot鈥檚 heading accordingly to keep it aligned in the middle of the road. During navigation, the robot also executes specific actions based on the detected traffic signs.
+Finally, calculate the offset of the target center point, and adjust the robot’s heading accordingly to keep it aligned in the middle of the road. During navigation, the robot also executes specific actions based on the detected traffic signs.
 
 #### 16.2.6.2 Preparation
 
@@ -3762,7 +3762,7 @@ Main function of the class, executes different line-following strategies based o
 
 Adjust the color thresholds according to the actual lighting environment. For detailed instructions, refer to the file [15. ROS2-ROS + OpenCV Course](https://wiki.hiwonder.com/projects/ROSOrin/en/jetson-nano-version/docs/15_ROS2_ROS%2BOpenCV_Course.html#ros2-ros-opencv-course).
 
-2\. The robot鈥檚 turning radius is too large or too small.
+2\. The robot’s turning radius is too large or too small.
 
 Click the icon <img src="../_static/media/chapter_15/section_2/media/image8.png"  /> on the system desktop to open a new ROS2 command line terminal. Enter the command to navigate to the program directory of the feature:
 

@@ -58,7 +58,7 @@ dlib github: *https://github.com/davisking/dlib*
 
 ### 7.1.2 Background Segmentation
 
-In this lesson, MediaPipe鈥檚 Selfie Segmentation model is used to segment trained models from the background and then apply a virtual background, such as a face or a hand.
+In this lesson, MediaPipe’s Selfie Segmentation model is used to segment trained models from the background and then apply a virtual background, such as a face or a hand.
 
 #### 7.1.2.1 Experiment Overview
 
@@ -234,7 +234,7 @@ The model within `mediapipe` is loaded, the image is passed as input, and the ou
 
 #### 7.1.3.1 Experiment Overview
 
-First, import MediaPipe鈥檚 3D Objection and subscribe to the topic messages to obtain the real-time camera feed.
+First, import MediaPipe’s 3D Objection and subscribe to the topic messages to obtain the real-time camera feed.
 
 Next, apply preprocessing steps such as image flipping, and then perform 3D object detection on the images.
 
@@ -398,7 +398,7 @@ Loads the model from MediaPipe, feeds the image into the model, and then uses Op
 
 ### 7.1.4 3D Face Detection
 
-In this program, MediaPipe鈥檚 face detection model is utilized to detect a human face within the camera image.
+In this program, MediaPipe’s face detection model is utilized to detect a human face within the camera image.
 
 MediaPipe Face Detection is a high-speed face detection solution that provides six key landmarks and supports multiple faces. Based on BlazeFace, a lightweight and efficient face detector optimized for mobile GPU inference.
 
@@ -408,7 +408,7 @@ First, import the MediaPipe face detection model and subscribe to the topic mess
 
 Next, use OpenCV to process the image, including flipping and converting the color space.
 
-Next, the system compares the detection confidence against the model鈥檚 minimum threshold to determine if face detection is successful. Once a face is detected, the system will analyze the set of facial features. Each face is represented as a detection message that contains a bounding box and six key landmarks, including right eye, left eye, nose tip, mouth center, right ear region, and left ear region.
+Next, the system compares the detection confidence against the model’s minimum threshold to determine if face detection is successful. Once a face is detected, the system will analyze the set of facial features. Each face is represented as a detection message that contains a bounding box and six key landmarks, including right eye, left eye, nose tip, mouth center, right ear region, and left ear region.
 
 Finally, the face will be outlined with a bounding box, and the six key landmarks will be marked on the image.
 
@@ -564,7 +564,7 @@ Additionally, the solution is bundled with a face transformation module that bri
 
 #### 7.1.5.1 Experiment Overview
 
-First, it鈥檚 important to understand that the machine learning pipeline used here, which can be thought of as a linear process, consists of two real-time deep neural network models working in tandem: One is a detector that processes the full image to locate faces. The other is a face landmark model that operates on those locations and uses regression to predict an approximate 3D surface.
+First, it’s important to understand that the machine learning pipeline used here, which can be thought of as a linear process, consists of two real-time deep neural network models working in tandem: One is a detector that processes the full image to locate faces. The other is a face landmark model that operates on those locations and uses regression to predict an approximate 3D surface.
 
 For the 3D face landmarks, transfer learning was applied, and a multi-task network was trained. This network simultaneously predicts 3D landmark coordinates on synthetic rendered data and 2D semantic contours on annotated real-world data. As a result, the network is informed by both synthetic and real-world data, allowing for accurate 3D landmark prediction.
 
@@ -722,7 +722,7 @@ Loads the model from MediaPipe, feeds the image into it, and uses OpenCV to draw
 
 ### 7.1.6 Hand Keypoint Detection
 
-In this lesson, MediaPipe鈥檚 hand detection model is used to display hand keypoints and the connecting lines between them on the returned image.
+In this lesson, MediaPipe’s hand detection model is used to display hand keypoints and the connecting lines between them on the returned image.
 
 MediaPipe Hands is a high-fidelity hand and finger tracking model. It uses machine learning (ML) to infer 21 3D landmarks of a hand from a single frame.
 
@@ -734,7 +734,7 @@ After importing the hand detection model, the system subscribes to topic message
 
 In addition, the pipeline can generate crops based on the hand landmarks recognized in the previous frame. The palm detection model is only invoked to re-locate the hand when the landmark model can no longer detect its presence.
 
-Next, the system compares the detection confidence against the model鈥檚 minimum threshold to determine if hand detection is successful.
+Next, the system compares the detection confidence against the model’s minimum threshold to determine if hand detection is successful.
 
 Finally, it detects and draws the hand keypoints on the output image.
 
@@ -886,7 +886,7 @@ The image callback function is used to read data from the camera node and enqueu
         rclpy.shutdown()
 ```
 
-Loads the model from MediaPipe, feeds the image into it, and uses OpenCV to draw the hand鈥檚 keypoints and display the returned video feed.
+Loads the model from MediaPipe, feeds the image into it, and uses OpenCV to draw the hand’s keypoints and display the returned video feed.
 
 ### 7.1.7 Body Keypoint Detection
 
@@ -904,7 +904,7 @@ Then, the program applies image preprocessing such as flipping and converting th
 
 Next, it uses a minimum tracking confidence threshold to decide whether the detected pose can be reliably tracked. If not, the model will automatically re-invoke detection on the next input image.
 
-The pipeline first identifies the region of interest (ROI) containing the person鈥檚 pose in the frame using a detector. The tracker then uses the cropped ROI image as input to predict pose landmarks and segmentation masks within that area. For video applications, the detector is only invoked when necessary鈥攕uch as for the first frame or when the tracker fails to identify a pose from the previous frame. For all other frames, the ROI is derived from the previously tracked landmarks.
+The pipeline first identifies the region of interest (ROI) containing the person’s pose in the frame using a detector. The tracker then uses the cropped ROI image as input to predict pose landmarks and segmentation masks within that area. For video applications, the detector is only invoked when necessary—such as for the first frame or when the tracker fails to identify a pose from the previous frame. For all other frames, the ROI is derived from the previously tracked landmarks.
 
 After importing the MediaPipe pose detection model, you can subscribe to the topic messages to obtain the real-time video stream from the camera.
 
@@ -1105,7 +1105,7 @@ cd ~/ros2_ws/src/example/example/mediapipe_example && python3 hand_gesture.py
 
 #### 7.1.8.3 Project Outcome
 
-After starting the feature, place your hand within the camera鈥檚 field of view. Once the hand is detected, key points of the hand will be marked in the returned image.
+After starting the feature, place your hand within the camera’s field of view. Once the hand is detected, key points of the hand will be marked in the returned image.
 
 If the gesture **1**, which involves extending the index finger, is detected, the robot will immediately enter recording mode. The system will track and display the movement of the fingertip in real time on the returned image using dynamic lines. This feature enables free drawing in the virtual space with simple gestures.
 
@@ -1249,13 +1249,13 @@ def h_gesture(angle_list):
 
 After identifying the types of fingers on the hand and determining their positions in the image, different gestures can be recognized by implementing the `h_gestrue` function.
 
-In the `h_gesture` function shown in the diagram above, the parameters `thr_angle = 65`, `thr_angle_thenum=53`, and `thr_angle_s=49` represent the angle threshold values for the corresponding gesture logic points. These values have been tested and found to provide stable recognition results. It is not recommended to change them. If the recognition performance is suboptimal, adjusting the values within 卤5 is sufficient. The `angle_list[0, 1, 2, 3, 4]` corresponds to the five fingers of the hand.
+In the `h_gesture` function shown in the diagram above, the parameters `thr_angle = 65`, `thr_angle_thenum=53`, and `thr_angle_s=49` represent the angle threshold values for the corresponding gesture logic points. These values have been tested and found to provide stable recognition results. It is not recommended to change them. If the recognition performance is suboptimal, adjusting the values within ±5 is sufficient. The `angle_list[0, 1, 2, 3, 4]` corresponds to the five fingers of the hand.
 
 Taking the gesture **one** as an example:
 
 <img src="../_static/media/chapter_8/section_1/media/image62.png"  style="width:600px"  class="common_img" />
 
-The code shown above represents the finger angle logic for the gesture **one**. `angle_list[0]>5` checks whether the angle of the thumb joint feature point in the image is greater than 5. `angle_list[1]<thr_angle_s` checks whether the angle feature of the index finger joint is smaller than the predefined value `thr_angle_s`锛宍angle_list[2]>thr_angle` checks whether the angle feature of the middle finger joint is smaller than the predefined value `thr_angle`. The logic for the other two fingers, `angle_list[3]` and `angle_list[4]`, follows a similar approach. When all these conditions are met, the current hand gesture is recognized as **one**. The recognition of other gestures follows a similar approach.
+The code shown above represents the finger angle logic for the gesture **one**. `angle_list[0]>5` checks whether the angle of the thumb joint feature point in the image is greater than 5. `angle_list[1]<thr_angle_s` checks whether the angle feature of the index finger joint is smaller than the predefined value `thr_angle_s`，`angle_list[2]>thr_angle` checks whether the angle feature of the middle finger joint is smaller than the predefined value `thr_angle`. The logic for the other two fingers, `angle_list[3]` and `angle_list[4]`, follows a similar approach. When all these conditions are met, the current hand gesture is recognized as **one**. The recognition of other gestures follows a similar approach.
 
 Each gesture has its own logic, but the overall framework is largely the same, and other gestures can be referenced based on this method.
 
@@ -1352,7 +1352,7 @@ Initializes all required components and calls the camera node.
 
 Using the human pose estimation model trained with the MediaPipe machine learning framework, the system detects the human pose in the camera feed and marks the relevant joint positions. Based on this, multiple actions can be recognized in sequence, allowing direct control of the robot through body gestures.
 
-From the robot鈥檚 first-person perspective:  
+From the robot’s first-person perspective:  
 Raising the left arm causes the robot to move a certain distance to the right. Raising the right arm causes the robot to move a certain distance to the left. Raising the left leg causes the robot to move forward a certain distance. Raising the right leg causes the robot to move backward a certain distance.
 
 #### 7.1.9.1 Experiment Overview
@@ -1393,7 +1393,7 @@ ros2 launch example body_control.launch.py
 
 #### 7.1.9.3 Project Outcome
 
-After starting the feature, stand within the camera鈥檚 field of view. When a human body is detected, the returned video feed will display the key points of the torso along with lines connecting them.
+After starting the feature, stand within the camera’s field of view. When a human body is detected, the returned video feed will display the key points of the torso along with lines connecting them.
 
 An intuitive body posture control logic has been designed for the robot, allowing control through simple body movements. The control instructions are as follows:
 
@@ -1619,7 +1619,7 @@ Image topic callback function, processes images and places them into a queue.
         self.move_finish = True
 ```
 
-Motion strategy function, controls the robot鈥檚 movement according to the detected body actions.
+Motion strategy function, controls the robot’s movement according to the detected body actions.
 
 `buzzer_warn`:
 
@@ -1729,7 +1729,7 @@ ros2 launch example body_track.launch.py
 
 #### 7.1.10.3 Project Outcome
 
-After the feature is enabled, a person stands within the camera's field of view. When detected, the center point of the person鈥檚 body will be marked in the live feed.
+After the feature is enabled, a person stands within the camera's field of view. When detected, the center point of the person’s body will be marked in the live feed.
 
 Using the depth camera, the robot can sense the distance to the person in real-time and automatically adjust its position to maintain a safe and comfortable distance of approximately 3 meters. When the person approaches, the robot will move backward. When the person moves away, the robot will move forward.
 
@@ -1912,13 +1912,13 @@ vim body_track.py
 
 <img src="../_static/media/chapter_8/section_1/media/image98.png" style="width:600px"  class="common_img" />
 
-The three PID parameters鈥攑roportional, integral, and derivative鈥攕erve different purposes: the proportional adjusts the response level, the integral smooths the response, and the derivative helps control overshoot.
+The three PID parameters—proportional, integral, and derivative—serve different purposes: the proportional adjusts the response level, the integral smooths the response, and the derivative helps control overshoot.
 
 4. To adjust the tracking speed, press the i key to enter edit mode, then increase the values. For example, set the linear velocity PID to 0.05 to boost the tracking speed.
 
 > [!NOTE]
 >
-> **It鈥檚 recommended not to increase the parameters too much, as doing so can cause the robot to track too quickly and negatively impact the feature.**
+> **It’s recommended not to increase the parameters too much, as doing so can cause the robot to track too quickly and negatively impact the feature.**
 
 <img src="../_static/media/chapter_8/section_1/media/image99.png" style="width:600px"  class="common_img" />
 
@@ -1940,7 +1940,7 @@ First, the MediaPipe human pose estimation model is imported, and the camera fee
 
 Next, based on the constructed model, the key points of the human torso in the camera feed are detected, and lines are drawn between the key points to visualize the torso and determine the body posture. The center of the body is calculated based on all key points.
 
-Finally, if the detected posture is 鈥渉ands on hips,鈥?the system uses the clothing color to identify the control target, and the robot enters control mode. When the person performs specific gestures, the robot responds accordingly.
+Finally, if the detected posture is “hands on hips,” the system uses the clothing color to identify the control target, and the robot enters control mode. When the person performs specific gestures, the robot responds accordingly.
 
 #### 7.1.11.2 Operation Steps
 
@@ -1970,7 +1970,7 @@ ros2 launch example body_and_rgb_control.launch.py
 
 #### 7.1.11.3 Project Outcome
 
-After starting the feature, stand within the camera鈥檚 field of view. When a person is detected, the camera feed will display the torso key points, lines connecting the points, and the body鈥檚 center point.
+After starting the feature, stand within the camera’s field of view. When a person is detected, the camera feed will display the torso key points, lines connecting the points, and the body’s center point.
 
 Step 1: Adjust the camera slightly higher and maintain a reasonable distance to ensure the full body is captured.
 
@@ -1990,7 +1990,7 @@ Backward movement: Raise the right leg, and the robot will move backward.
 
 <img src="../_static/media/chapter_8/section_1/media/image103.png"  style="width:600px"  class="common_img" />
 
-Step 4: If someone wearing a different color enters the camera鈥檚 field of view, they will not be able to control the robot.
+Step 4: If someone wearing a different color enters the camera’s field of view, they will not be able to control the robot.
 
 <img src="../_static/media/chapter_8/section_1/media/image104.png"  style="width:600px"  class="common_img" />
 
@@ -2261,7 +2261,7 @@ Image topic callback function processes images and places them into a queue.
         self.move_finish = True
 ```
 
-Motion strategy function controls the robot鈥檚 movement according to the detected body actions.
+Motion strategy function controls the robot’s movement according to the detected body actions.
 
 `buzzer_warn`:
 
@@ -2369,7 +2369,7 @@ ros2 launch example fall_down_detect.launch.py
 
 #### 7.1.12.3 Project Outcome
 
-After starting the feature, make sure the person is fully within the camera鈥檚 field of view. When a person is detected, the keypoints of the body will be marked on the live feed.
+After starting the feature, make sure the person is fully within the camera’s field of view. When a person is detected, the keypoints of the body will be marked on the live feed.
 
 When the person appears with a significantly low height in the camera feed, the robot will recognize it as a falling posture and initiate an emergency response. The robot will emit a continuous alarm sound and move rapidly back and forth.
 
@@ -2525,7 +2525,7 @@ The image topic callback function processes images and places them into a queue.
         self.move_finish = True
 ```
 
-Motion strategy function controls the robot鈥檚 movement according to the detected body height.
+Motion strategy function controls the robot’s movement according to the detected body height.
 
 `buzzer_warn`:
 
@@ -2621,7 +2621,7 @@ Machine Learning is the core of AI and the fundamental approach to enabling mach
 
 The essence of machine learning lies in enabling computers to simulate or implement human learning behaviors in order to acquire new knowledge or skills, and reorganize existing knowledge structures to continuously improve performance. From a practical perspective, machine learning involves training models using data and making predictions with those models.
 
-Take AlphaGo as an example鈥攊t was the first AI program to defeat a professional human Go player and later a world champion. AlphaGo operates based on deep learning, which involves learning the underlying patterns and hierarchical representations from sample data to gain insights.
+Take AlphaGo as an example—it was the first AI program to defeat a professional human Go player and later a world champion. AlphaGo operates based on deep learning, which involves learning the underlying patterns and hierarchical representations from sample data to gain insights.
 
 #### 7.2.1.3 Types of Machine Learning
 
@@ -2649,7 +2649,7 @@ In summary, supervised learning involves using labeled training data to build a 
 
 Unsupervised learning involves providing the algorithm with data without labels or known answers. All data is treated equally, and the machine is expected to uncover hidden structures or patterns.
 
-For example, in image classification, if you provide a set of images containing cats and dogs without any labels. The algorithm will analyze the data and automatically group the images into two categories鈥攃at images and dog images鈥攂ased on similarities.
+For example, in image classification, if you provide a set of images containing cats and dogs without any labels. The algorithm will analyze the data and automatically group the images into two categories—cat images and dog images—based on similarities.
 
 <img src="..\_static\media\chapter_9\section_1\media\image4.png"  style="width:600px"  class="common_img" />
 
@@ -2663,7 +2663,7 @@ There are many machine learning frameworks available. The most commonly used inc
 
 Torch is an open-source machine learning framework under the BSD License, widely used for its powerful multi-dimensional array operations. PyTorch is a machine learning library based on Torch but offers greater flexibility, supports dynamic computation graphs, and provides a Python interface.
 
-Unlike TensorFlow鈥檚 static computation graphs, PyTorch uses dynamic computation graphs, which can be modified in real-time according to the needs of the computation. PyTorch allows developers to accelerate tensor operations using GPUs, build dynamic graphs, and perform automatic differentiation.
+Unlike TensorFlow’s static computation graphs, PyTorch uses dynamic computation graphs, which can be modified in real-time according to the needs of the computation. PyTorch allows developers to accelerate tensor operations using GPUs, build dynamic graphs, and perform automatic differentiation.
 
 <img src="..\_static\media\chapter_9\section_1\media\image5.png"   style="width:600px"  class="common_img" />
 
@@ -2671,13 +2671,13 @@ Unlike TensorFlow鈥檚 static computation graphs, PyTorch uses dynamic computat
 
 TensorFlow is an open-source machine learning framework designed to simplify the process of building, training, evaluating, and saving neural networks. It enables the implementation of machine learning and deep learning concepts in the simplest way. With its foundation in computational algebra and optimization techniques,
 
-TensorFlow allows for efficient mathematical computations. It can run on a wide range of hardware鈥攆rom supercomputers to embedded systems鈥攎aking it highly versatile. TensorFlow supports CPU, GPU, or both simultaneously. Compared to other frameworks, TensorFlow is best suited for industrial deployment, making it highly appropriate for use in production environments.
+TensorFlow allows for efficient mathematical computations. It can run on a wide range of hardware—from supercomputers to embedded systems—making it highly versatile. TensorFlow supports CPU, GPU, or both simultaneously. Compared to other frameworks, TensorFlow is best suited for industrial deployment, making it highly appropriate for use in production environments.
 
 <img src="..\_static\media\chapter_9\section_1\media\image6.png"  style="width:600px"  class="common_img" />
 
 #### 7.2.2.4 PaddlePaddle
 
-PaddlePaddle, developed by Baidu, is China鈥檚 first open-source, industrial-grade deep learning platform. It integrates a deep learning training and inference framework, a library of foundational models, end-to-end development tools, and a rich suite of supporting components. Built on years of Baidu鈥檚 R\&D and real-world applications in deep learning, PaddlePaddle is powerful and versatile.
+PaddlePaddle, developed by Baidu, is China’s first open-source, industrial-grade deep learning platform. It integrates a deep learning training and inference framework, a library of foundational models, end-to-end development tools, and a rich suite of supporting components. Built on years of Baidu’s R\&D and real-world applications in deep learning, PaddlePaddle is powerful and versatile.
 
 In recent years, deep learning has achieved outstanding performance across many fields such as image recognition, speech recognition, natural language processing, robotics, online advertising, medical diagnostics, and finance.
 
@@ -2685,7 +2685,7 @@ In recent years, deep learning has achieved outstanding performance across many 
 
 #### 7.2.2.5 MXNet
 
-MXNet is another high-performance deep learning framework that supports multiple programming languages, including Python, C++, Scala, and R. It offers data flow graphs similar to those in Theano and TensorFlow and supports multi-GPU configuration. It also includes high-level components for model building, comparable to those in Lasagne and Blocks, and can run on nearly any hardware platform鈥攊ncluding mobile devices.
+MXNet is another high-performance deep learning framework that supports multiple programming languages, including Python, C++, Scala, and R. It offers data flow graphs similar to those in Theano and TensorFlow and supports multi-GPU configuration. It also includes high-level components for model building, comparable to those in Lasagne and Blocks, and can run on nearly any hardware platform—including mobile devices.
 
 <img src="..\_static\media\chapter_9\section_1\media\image8.jpeg"   style="width:600px"  class="common_img" />
 
@@ -2735,7 +2735,7 @@ In YOLOv8, the data to be processed are images, which are two-dimensional in com
 
 The convolution kernel is the unit region over which the convolution calculation is performed each time. The unit is pixels, and the convolution sums the pixel values within the region. Typically, convolution is done by sliding the kernel across the image, and the kernel size is manually set.
 
-When performing convolution, depending on the desired effect, the image borders may be padded with zeros or extended by a certain number of pixels, then the convolution results are placed back into the corresponding positions in the image. For example, a 6脳6 image is first expanded to 7脳7, then convolved with the kernel, and finally the results are filled back into a blank 6脳6 image.
+When performing convolution, depending on the desired effect, the image borders may be padded with zeros or extended by a certain number of pixels, then the convolution results are placed back into the corresponding positions in the image. For example, a 6×6 image is first expanded to 7×7, then convolved with the kernel, and finally the results are filled back into a blank 6×6 image.
 
 <img src="../_static/media/chapter_10/section_1/media/image5.png" style="width:600px" class="common_img" />
 
@@ -2745,11 +2745,11 @@ When performing convolution, depending on the desired effect, the image borders 
 
 The pooling layer, also called the downsampling layer, is usually used together with convolution layers. After convolution, pooling performs further sampling on the extracted features. Pooling includes various types such as global pooling, average pooling, max pooling, etc., each producing different effects.
 
-To make it easier to understand, max pooling is used here as an example. Before understanding max pooling, it is important to know about the filter, which is like the convolution kernel鈥攁 manually set region that slides over the image and selects pixels within the area.
+To make it easier to understand, max pooling is used here as an example. Before understanding max pooling, it is important to know about the filter, which is like the convolution kernel—a manually set region that slides over the image and selects pixels within the area.
 
 <img src="../_static/media/chapter_10/section_1/media/image7.png"  style="width:600px" class="common_img" />
 
-Max pooling keeps the most prominent features and discards others. For example, starting with a 6脳6 image, applying a 2脳2 filter for max pooling produces a new image with reduced size.
+Max pooling keeps the most prominent features and discards others. For example, starting with a 6×6 image, applying a 2×2 filter for max pooling produces a new image with reduced size.
 
 <img src="../_static/media/chapter_10/section_1/media/image8.png"  style="width:600px" class="common_img" />
 
@@ -2757,7 +2757,7 @@ Max pooling keeps the most prominent features and discards others. For example, 
 
 Upsampling can be understood as **reverse pooling**. After pooling, the image size shrinks, and upsampling restores the image to its original size. However, only the size is restored, the pooled features are also modified accordingly.
 
-For example, starting with a 6脳6 image, applying a 3脳3 filter for upsampling produces a new image.
+For example, starting with a 6×6 image, applying a 3×3 filter for upsampling produces a new image.
 
 <img src="../_static/media/chapter_10/section_1/media/image9.png"  style="width:600px" class="common_img" />
 
@@ -2765,13 +2765,13 @@ For example, starting with a 6脳6 image, applying a 3脳3 filter for upsampling
 
 Batch normalization means rearranging the data neatly, which reduces the computational difficulty of the model and helps map data better into the activation functions.
 
-Batch normalization reduces the loss rate of features during each calculation, retaining more features for the next computation. After multiple computations, the model鈥檚 sensitivity to the data increases.
+Batch normalization reduces the loss rate of features during each calculation, retaining more features for the next computation. After multiple computations, the model’s sensitivity to the data increases.
 
 <img src="../_static/media/chapter_10/section_1/media/image10.png" style="width:600px" class="common_img" />
 
 1. ReLU Layer: Activation Function
 
-Activation functions are added during model construction to introduce non-linearity. Without activation functions, each layer is essentially a matrix multiplication. Every layer鈥檚 output is a linear function of the previous layer鈥檚 input, so no matter how many layers the neural network has, the output is just a linear combination of the input. This prevents the model from adapting to actual situations.
+Activation functions are added during model construction to introduce non-linearity. Without activation functions, each layer is essentially a matrix multiplication. Every layer’s output is a linear function of the previous layer’s input, so no matter how many layers the neural network has, the output is just a linear combination of the input. This prevents the model from adapting to actual situations.
 
 There are many activation functions, commonly ReLU, Tanh, Sigmoid, etc. Here, ReLU is used as an example. ReLU is a piecewise function that replaces all values less than 0 with 0 and keeps positive values unchanged.
 
@@ -2795,18 +2795,18 @@ When building a model, using only the basic layers mentioned earlier can lead to
 
 1. Convolutional Block
 
-A convolutional block consists of a convolutional layer, a batch normalization layer, and an activation function. The process follows this order: convolution 鈫?batch normalization 鈫?activation.
+A convolutional block consists of a convolutional layer, a batch normalization layer, and an activation function. The process follows this order: convolution → batch normalization → activation.
 
 <img src="../_static/media/chapter_10/section_1/media/image14.png"  style="width:600px" class="common_img" />
 
-1. Strided Sampling and Concatenation Unit锛團ocus锛?
+1. Strided Sampling and Concatenation Unit（Focus）
 
 The input image is first divided into multiple large regions. Then, small image patches located at the same relative position within each large region are concatenated together to form a new image. This effectively splits the input image into several smaller images. Finally, an initial sampling is performed on the images using a convolutional block.
 
-As shown in the figure below, for a 6脳6 image, if each large region is defined as 2脳2, the image can be divided into 9 large regions, and each contains 4 small patches.
+As shown in the figure below, for a 6×6 image, if each large region is defined as 2×2, the image can be divided into 9 large regions, and each contains 4 small patches.
 
-By taking the small patches at position 1 from each large region and concatenating them, a 3脳3 image can be formed. The patches at other positions are concatenated in the same way.  
-Ultimately, the original 6脳6 image is decomposed into four 3脳3 images.
+By taking the small patches at position 1 from each large region and concatenating them, a 3×3 image can be formed. The patches at other positions are concatenated in the same way.  
+Ultimately, the original 6×6 image is decomposed into four 3×3 images.
 
 <img src="../_static/media/chapter_10/section_1/media/image15.png"  style="width:600px" class="common_img" />
 
@@ -2824,13 +2824,13 @@ In the first path, two convolutional blocks are used to extract features from th
 
 In YOLOv8, a key feature of the composite convolutional block is its customizable design, allowing convolutional blocks to be configured as needed. This structure also uses two paths whose outputs are merged.
 
-The first path contains a single convolutional layer for feature extraction, while the second path includes 2饾懃+1 convolutional blocks followed by an additional convolutional layer. After sampling and concatenation, batch normalization is applied to standardize the data, followed by an activation function. Finally, a convolutional block is used to process the combined features.
+The first path contains a single convolutional layer for feature extraction, while the second path includes 2𝑥+1 convolutional blocks followed by an additional convolutional layer. After sampling and concatenation, batch normalization is applied to standardize the data, followed by an activation function. Finally, a convolutional block is used to process the combined features.
 
 <img src="../_static/media/chapter_10/section_1/media/image18.png" style="width:600px" class="common_img" />
 
 1. Composite Residual Convolutional Block
 
-The composite residual convolutional block modifies the composite convolutional block by replacing the 2饾懃 convolutional blocks with 饾懃 residual blocks. In YOLOv8, this block is also customizable, allowing residual blocks to be tailored according to specific requirements.
+The composite residual convolutional block modifies the composite convolutional block by replacing the 2𝑥 convolutional blocks with 𝑥 residual blocks. In YOLOv8, this block is also customizable, allowing residual blocks to be tailored according to specific requirements.
 
 <img src="../_static/media/chapter_10/section_1/media/image20.png" style="width:600px" class="common_img" />
 
@@ -2844,7 +2844,7 @@ The output from a convolutional block is simultaneously passed through three sep
 
 ### 7.3.2 YOLOv8 Workflow
 
-This section explains the model鈥檚 processing flow using the concepts of prior boxes, prediction boxes, and anchor boxes involved in YOLOv8.
+This section explains the model’s processing flow using the concepts of prior boxes, prediction boxes, and anchor boxes involved in YOLOv8.
 
 #### 7.3.2.1 Prior Box
 
@@ -2938,7 +2938,7 @@ After clicking **Save (space)**, a folder named **JPEGImages** will be automatic
 
 <img src="../_static/media/chapter_10/section_1/media/image39.png" style="width:600px" class="common_img" />
 
-11. Then press **Ctrl+C** in all opened terminal windows to exit鈥攖his completes the image collection process.
+11. Then press **Ctrl+C** in all opened terminal windows to exit—this completes the image collection process.
 
 #### 7.3.3.2 Image Annotation
 
@@ -3049,7 +3049,7 @@ This command uses three main parameters:
 
    <img src="../_static/media/chapter_10/section_1/media/image60.png" style="width:600px" class="common_img" />
 
-   The items listed after the names represent the types of labels. The **nc** field specifies the total number of label categories. The **train** refers to the training set鈥攁 commonly used term in deep learning that indicates the data used for model training. The parameter following it is the path to the training images. Similarly, the **val** refers to the validation set, which is used to verify the model鈥檚 performance during the training process, and the path that follows indicates where the validation data is located. These file paths need to be set based on the actual location of your data. For example, to speed up the training process later by moving the dataset from the robot to a local PC or a cloud server,  the train and val paths should be updated accordingly to reflect their new locations.
+   The items listed after the names represent the types of labels. The **nc** field specifies the total number of label categories. The **train** refers to the training set—a commonly used term in deep learning that indicates the data used for model training. The parameter following it is the path to the training images. Similarly, the **val** refers to the validation set, which is used to verify the model’s performance during the training process, and the path that follows indicates where the validation data is located. These file paths need to be set based on the actual location of your data. For example, to speed up the training process later by moving the dataset from the robot to a local PC or a cloud server,  the train and val paths should be updated accordingly to reflect their new locations.
 
    Finally, an XML file will be generated under the ~/my_data folder to record the path location of the currently split dataset. Similarly, the last parameter in step 4, **~/my_data/data.yaml**, can be changed to modify the save path. This file path must be remembered, as it will be used later for model training.
 
@@ -3114,7 +3114,7 @@ When dealing with large datasets, it is not recommended to train models directly
 
 If the traffic sign recognition performance in autonomous driving feature is unsatisfactory, training a custom model can be done by following the procedures in this section.
 
-In the following instructions, screenshots may show different robot hostnames, as different robots have similar environment setups. Simply follow the command steps in the document as described 鈥?it does not affect the execution.
+In the following instructions, screenshots may show different robot hostnames, as different robots have similar environment setups. Simply follow the command steps in the document as described — it does not affect the execution.
 
 #### 7.3.6.1 Preparation
 
@@ -3234,7 +3234,7 @@ Move the mouse to the desired location and hold the left mouse button to draw a 
 
 2. Enter the following command to open the file for editing:
 
-```bash
+```bad
 vim ~/my_data/classes.names
 ```
 
@@ -3258,7 +3258,7 @@ python3 ~/software/xml2yolo.py --data ~/my_data --yaml ~/my_data/data.yaml
 
 In this command, the **xml2yolo.py** file is used to convert the annotated files into XML format and categorize the dataset into training and validation sets.
 
-The output paths depend on the actual storage location of the folders in your robot鈥檚 file system. Paths may vary across devices, but the generated **data.yaml** file will correspond to your annotated dataset.
+The output paths depend on the actual storage location of the folders in your robot’s file system. Paths may vary across devices, but the generated **data.yaml** file will correspond to your annotated dataset.
 
 #### 7.3.6.6 Training Process
 
@@ -3276,7 +3276,7 @@ cd /home/ubuntu/third_party_ros2/yolo/yolov8
 python3 train.py --img 640 --batch 64 --epochs 300 --data ~/my_data/data.yaml --weights yolov8n.pt
 ```
 
-In the command, **--img** specifies the image size, **--batch** indicates the number of images input per batch, **--epochs** refers to the number of training iterations, representing how many times the machine learning model will go through the dataset. This value should be optimized based on the actual performance of the final model. In this example, the number of training epochs is set to 8 for quick testing. If the computer system is more powerful, this value can be increased to achieve better training results. **--data** is the path to the dataset, which refers to the folder containing the manually annotated data. **--weights** indicates the path to the pre-trained model weights. This specifies which .pt weight file the training process is based on. It鈥檚 important to note whether Yolov8n.pt, Yolov8s.pt, or another version is used.
+In the command, **--img** specifies the image size, **--batch** indicates the number of images input per batch, **--epochs** refers to the number of training iterations, representing how many times the machine learning model will go through the dataset. This value should be optimized based on the actual performance of the final model. In this example, the number of training epochs is set to 8 for quick testing. If the computer system is more powerful, this value can be increased to achieve better training results. **--data** is the path to the dataset, which refers to the folder containing the manually annotated data. **--weights** indicates the path to the pre-trained model weights. This specifies which .pt weight file the training process is based on. It’s important to note whether Yolov8n.pt, Yolov8s.pt, or another version is used.
 
 The above parameters can be adjusted according to the specific setup. To improve model accuracy, consider increasing the number of training epochs. Note that this will also increase training time.
 
@@ -3296,7 +3296,7 @@ If the following content appears, it indicates that the training is in progress.
 ~/.stop_ros.sh
 ```
 
-2. Enter the following command to navigate to the directory where the corresponding feature鈥檚 program is located:
+2. Enter the following command to navigate to the directory where the corresponding feature’s program is located:
 
 ```bash
 cd /home/ubuntu/third_party_ros2/yolo/yolov8
@@ -3322,7 +3322,7 @@ vim ~/ros2_ws/src/yolov8_detect/yolov8_detect/yolov8_detect_demo.py
 
 6. After that, enter the command to run the model-calling program. A depth camera needs to be connected.
 
-```bash
+```bash]
 ros2 launch yolov8_detect yolov8_detect_demo.launch.py
 ```
 
@@ -3330,7 +3330,7 @@ ros2 launch yolov8_detect yolov8_detect_demo.launch.py
 
 ## 7.4 Autonomous Driving
 
-Before starting, it鈥檚 important to familiarize yourself with the map and the placement of relevant props.
+Before starting, it’s important to familiarize yourself with the map and the placement of relevant props.
 
 The map should be laid on a flat surface, ensuring it is smooth without wrinkles, and that the road is clear of any obstacles. All road signs and traffic lights must be placed at the designated positions on the map, facing clockwise along the route. The positions of the road signs and the starting point are shown in the figure below.
 
@@ -3356,7 +3356,7 @@ First, real-time images are captured using the camera.
 
 Next, the images are processed. This includes color detection, converting the detected images into a suitable color space, applying erosion and dilation, and performing binarization.
 
-Finally, the processed images are analyzed. The region of interest (ROI) is extracted, contours are identified, and comparisons are made to determine the car鈥檚 position relative to the lane.
+Finally, the processed images are analyzed. The region of interest (ROI) is extracted, contours are identified, and comparisons are made to determine the car’s position relative to the lane.
 
 Based on the comparison results, the forward direction is adjusted to keep the robot centered in the lane.
 
@@ -3472,7 +3472,7 @@ Retrieves the largest contour from a list of contours obtained via OpenCV.
 
 ```python
     def add_horizontal_line(self, image):
-        #   |____  --->   |鈥斺€斺€斺€?  ---> 鈥斺€?
+        #   |____  --->   |————   ---> ——
         h, w = image.shape[:2]
         roi_w_min = int(w/2)
         roi_w_max = w
@@ -3500,10 +3500,10 @@ Adds horizontal lines for detection based on the image width, height, and ROI.
         flip_binary = cv2.flip(roi, -1)  # Flip the image horizontally and vertically
         #cv2.imshow('1', flip_binary)
         # min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(ret)
-        # minVal锛歍he minimum value
-        # maxVal锛歍he maximum value
-        # minLoc锛歍he location of the minimum value
-        # maxLoc锛歍he location of the maximum value
+        # minVal：The minimum value
+        # maxVal：The maximum value
+        # minLoc：The location of the minimum value
+        # maxLoc：The location of the maximum value
         # The order of traversal is: first rows, then columns, with rows from left to right and columns from top to bottom
         (x_0, y_0) = cv2.minMaxLoc(flip_binary)[-1]  # Extract the coordinates of the top-left point with a value of 255
         y_center = y_0 + 55
@@ -3547,7 +3547,7 @@ Performs color recognition in the specified color space and generates a binary i
 
 ```python
     def add_vertical_line_near(self, image):
-        # 鈥斺€攟         |鈥斺€?       |
+        # ——|         |——        |
         #   |   --->  |     --->
         h, w = image.shape[:2]
         roi_w_min = 0
@@ -3629,7 +3629,7 @@ Adds vertical detection lines in the near area of the image based on ROI and ima
         return result_image, angle, max_center_x, max_area
 ```
 
-The class鈥檚 callback function performs color recognition, draws detected yellow lines using OpenCV, and outputs the processed image, the line angles, and the pixel coordinates (X) of each ROI contour.
+The class’s callback function performs color recognition, draws detected yellow lines using OpenCV, and outputs the processed image, the line angles, and the pixel coordinates (X) of each ROI contour.
 
 
 
@@ -3683,7 +3683,7 @@ ros2 launch yolov8_detect yolov8_detect_demo.launch.py
 
 #### 7.4.2.4 Program Outcome
 
-After launching the feature, place the robot on the map鈥檚 road. When the robot detects a traffic sign, it will highlight the detected sign and display the label with the highest confidence based on the trained model.
+After launching the feature, place the robot on the map’s road. When the robot detects a traffic sign, it will highlight the detected sign and display the label with the highest confidence based on the trained model.
 
 <img src="../_static/media/chapter_11/section_1/media/image26.png"  style="width:600px"  class="common_img" />
 
@@ -3739,7 +3739,7 @@ ros2 launch yolov8_detect yolov8_detect_demo.launch.py
 
 #### 7.4.3.4 Program Outcome
 
-Once the feature is started, place the robot on the map鈥檚 road. When the robot detects a traffic light, it will identify the light鈥檚 color and highlight red and green signals accordingly.
+Once the feature is started, place the robot on the map’s road. When the robot detects a traffic light, it will identify the light’s color and highlight red and green signals accordingly.
 
 <img src="../_static/media/chapter_11/section_1/media/image27.png"  style="width:600px"  class="common_img" />
 
@@ -3795,7 +3795,7 @@ ros2 launch yolov8_detect yolov8_detect_demo.launch.py
 
 #### 7.4.4.4 Program Outcome
 
-After starting the feature, place the robot on the map road. When the robot approaches a turn sign, it will adjust its direction of travel according to the sign鈥檚 instruction.
+After starting the feature, place the robot on the map road. When the robot approaches a turn sign, it will adjust its direction of travel according to the sign’s instruction.
 
 <img src="../_static/media/chapter_11/section_1/media/image28.png"  style="width:600px"  class="common_img" />
 
@@ -3851,7 +3851,7 @@ ros2 launch yolov8_detect yolov8_detect_demo.launch.py
 
 #### 7.4.5.4 Program Outcome
 
-After starting the feature, place the robot on the roadway of the map. When the robot reaches the parking sign, it will follow the sign鈥檚 instructions and automatically park in the designated spot.
+After starting the feature, place the robot on the roadway of the map. When the robot reaches the parking sign, it will follow the sign’s instructions and automatically park in the designated spot.
 
 <p id ="anther7.4.6"></p>
 
@@ -3879,7 +3879,7 @@ First, load the YOLOv8-trained model file along with the required libraries, and
 
 Next, detect the target color line in the image, and extract key information such as the size and center point of the detected region. Then, apply the YOLOv8 model to compare the processed image with the target dataset.
 
-Finally, calculate the offset of the target center point, and adjust the robot鈥檚 heading accordingly to keep it aligned in the middle of the road. During navigation, the robot also executes specific actions based on the detected traffic signs.
+Finally, calculate the offset of the target center point, and adjust the robot’s heading accordingly to keep it aligned in the middle of the road. During navigation, the robot also executes specific actions based on the detected traffic signs.
 
 #### 7.4.6.1 Preparation
 
@@ -4298,4 +4298,3 @@ Callback for YOLOv8 results, retrieves the current recognized classes.
 ```
 
 Main function of the class, executes different line-following strategies based on the chassis type.
-
